@@ -1,0 +1,12 @@
+.navbar_button{
+    color: #fff;
+    background: none !important;
+    margin-right: 10px;
+}
+.navbar_button:hover{
+    color: #F02757 !important;
+}
+
+a.active {
+    color: #F02757;
+  }
