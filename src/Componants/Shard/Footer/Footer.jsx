@@ -49,7 +49,7 @@ const Footer = () => {
                     </aside>
                 </footer>
                 <p className='border-t-2 border-base-200 mt-5'></p>
-                <div className='grid lg:grid-cols-4 py-10 gap-5 p-5 theme_text'>
+                <div className='grid lg:grid-cols-4 py-10 gap-5 p-5 theme_text justify-center'>
                     <div className='flex items-center gap-5'>
                         <TbTruckDelivery className='text-4xl'></TbTruckDelivery>
                         <div>
