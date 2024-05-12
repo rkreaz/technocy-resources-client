@@ -49,6 +49,7 @@ const Testimonial = () => {
 
                 </div>
             </div>
+            <p className='border-t-2 border-base-200 mt-5'></p>
         </div>
     );
 };

@@ -42,7 +42,7 @@ const Categories = () => {
                                         data-aos-duration="3000" className=' rounded-lg'>
                                         <img src={carIcon1} className="w-28 h-28 " />
                                     </div>
-                                    <h2 className="font-bold text-xl text-center text-[#000]">Mobiles</h2>
+                                    <h2 className="font-bold text-xl text-center text-[#000]">Phones</h2>
                                 </div>
                                 <div className="card border mx-auto p-2 cursor-pointer hover:bg-[#ee708d23]">
                                     <div data-aos="zoom-in"

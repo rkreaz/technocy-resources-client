@@ -7,7 +7,7 @@ import './footer.css'
 
 const Footer = () => {
     return (
-        <div className=' bg-gradient-to-r from-indigo-500 via-[#ea1043e1] to-[#6565EE]'>
+        <div className='theme'>
             <div className="max-w-6xl mx-auto pt-14">
                 <footer className="footer theme_text mx-auto max-sm:text-center">
                     <nav>
