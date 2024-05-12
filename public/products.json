@@ -1,0 +1,886 @@
+[
+    {
+      "_id": "642c155b2c4774f05c36ee82",
+      "name": "Phone X",
+      "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-13-mini.jpg",
+      "category": "phone",
+      "price": 699.99
+    },
+    {
+      "_id": "642c155b2c4774f05c36ee83",
+      "name": "Phone Pro",
+      "details": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-13-pro.jpg",
+      "category": "phone",
+      "price": 899.99
+    },
+    {
+      "_id": "642c155b2c4774f05c36ee84",
+      "name": "Phone Max",
+      "details": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-13-pro-max.jpg",
+      "category": "phone",
+      "price": 1099.99
+    },
+    {
+      "_id": "642c155b2c4774f05c36ee85",
+      "name": "Phone Ultra",
+      "details": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-13.jpg",
+      "category": "phone",
+      "price": 1299.99
+    },
+    {
+      "_id": "642c155b2c4774f05c36pp86",
+      "name": "Phone Lite",
+      "details": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-12-pro-max-.jpg",
+      "category": "phone",
+      "price": 499.99
+    },
+    {
+      "_id": "642c155b2c4774f05c36ew86",
+      "name": "Phone Edge",
+      "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-12-pro--.jpg",
+      "category": "phone",
+      "price": 799.99
+    },
+    {
+      "_id": "642c155b2c4774f05c36ee87",
+      "name": "Phone Prime",
+      "details": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-12.jpg",
+      "category": "phone",
+      "price": 699.99
+    },
+    {
+      "_id": "642c155b2c4774f05c36ee88",
+      "name": "Phone Neo",
+      "details": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-12-mini.jpg",
+      "category": "phone",
+      "price": 599.99
+    },
+    {
+      "_id": "642c155b2c4774f05c36ee11",
+      "name": "Phone Classic",
+      "details": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-se-2020.jpg",
+      "category": "phone",
+      "price": 599.99
+    },
+
+    {
+      "_id": "642c155b2c4774f05c36ee22",
+      "name": "Phone Classic",
+      "details": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-11-pro.jpg",
+      "category": "popular",
+      "price": 599.99
+    },
+   
+    {
+      "_id": "642c155b2c4774f05c36ee33",
+      "name": "Phone Classic",
+      "details": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-11-pro-max-.jpg",
+      "category": "phone",
+      "price": 599.99
+    },
+  
+    {
+      "_id": "642c155b2c4774f05c36ee44",
+      "name": "Phone Classic",
+      "details": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-11.jpg",
+      "category": "popular",
+      "price": 599.99
+    },
+
+    {
+      "_id": "642c155b2c4774f05c36ee55",
+      "name": "Phone Classic",
+      "details": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-xs-max-new1.jpg",
+      "category": "phone",
+      "price": 569.99
+    },
+
+    {
+      "_id": "642c155b2c4774f05c36ee66",
+      "name": "Phone Classic",
+      "details": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-xr-new.jpg",
+      "category": "popular",
+      "price": 555.99
+    },
+  
+    {
+      "_id": "642c155b2c4774f05c36el88",
+      "name": "Phone Classic",
+      "details": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-xs-new.jpg",
+      "category": "popular",
+      "price": 598.99
+    },
+    
+    {
+        "_id": "642c155b2c4774f05c36e111",
+        "name": "Laptop-152",
+        "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "image": "https://cdn.thewirecutter.com/wp-content/media/2023/06/bestlaptops-2048px-9765.jpg",
+        "category": "laptop",
+        "price": 699.99
+      },
+      {
+        "_id": "642c155b2c4774f05c36e222",
+        "name": "Laptop-454",
+        "details": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "image": "https://cdn.vox-cdn.com/thumbor/VQly1w93xlcWUnSPvMylJUirJlw=/0x0:2040x1360/1200x0/filters:focal(0x0:2040x1360):no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/22046471/vpavic_4291_20201113_0411.0.jpg",
+        "category": "laptop",
+        "price": 899.99
+      },
+      {
+        "_id": "642c155b2c4774f05c36e333",
+        "name": "Laptop-4545",
+        "details": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "image": "https://thumbs.dreamstime.com/b/laptop-computer-travel-37983668.jpg",
+        "category": "laptop",
+        "price": 1099.99
+      },
+      {
+        "_id": "642c155b2c4774f05c36e444",
+        "name": "Laptop-apple-445",
+        "details": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "image": "https://nairametrics.com/wp-content/uploads/2022/02/Laptop-.jpg",
+        "category": "laptop",
+        "price": 1299.99
+      },
+      {
+        "_id": "642c155b2c4774f05c36e555",
+        "name": "Laptop-484",
+        "details": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "image": "https://tekshanghai.com/wp-content/uploads/2021/07/Lenovo-ThinkPad-X1-Nano_8.png",
+        "category": "laptop",
+        "price": 499.99
+      },
+      {
+        "_id": "642c155b2c4774f05c36e666",
+        "name": "Laptop-Dell",
+        "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "image": "https://cdn.thewirecutter.com/wp-content/media/2023/06/bestlaptops-2048px-9765.jpg",
+        "category": "laptop",
+        "price": 799.99
+      },
+      {
+        "_id": "642c155b2c4774f05c36e777",
+        "name": "Laptop-Samsung",
+        "details": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "image": "https://cdn.vox-cdn.com/thumbor/VQly1w93xlcWUnSPvMylJUirJlw=/0x0:2040x1360/1200x0/filters:focal(0x0:2040x1360):no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/22046471/vpavic_4291_20201113_0411.0.jpg",
+        "category": "laptop",
+        "price": 699.99
+      },
+      {
+        "_id": "642c155b2c4774f05c36e888",
+        "name": "Laptop-Neo",
+        "details": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "image": "https://thumbs.dreamstime.com/b/laptop-computer-travel-37983668.jpg",
+        "category": "laptop",
+        "price": 599.99
+      },
+      {
+        "_id": "642c155b2c4774f05c36e999",
+        "name": "Laptop-Classic",
+        "details": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "image": "https://nairametrics.com/wp-content/uploads/2022/02/Laptop-.jpg",
+        "category": "laptop",
+        "price": 599.99
+      },
+  
+      {
+        "_id": "642c155b2c4774f05c36e101",
+        "name": "Laptop-Dell",
+        "details": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "image": "https://tekshanghai.com/wp-content/uploads/2021/07/Lenovo-ThinkPad-X1-Nano_8.png",
+        "category": "laptop",
+        "price": 599.99
+      },
+     
+      {
+        "_id": "642c155b2c4774f05c36e102",
+        "name": "Laptop-4584",
+        "details": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "image": "https://nairametrics.com/wp-content/uploads/2022/02/Laptop-.jpg",
+        "category": "laptop",
+        "price": 599.99
+      },
+    
+      {
+        "_id": "642c155b2c4774f05c36e103",
+        "name": "Laptop Classic",
+        "details": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "image": "https://tekshanghai.com/wp-content/uploads/2021/07/Lenovo-ThinkPad-X1-Nano_8.png",
+        "category": "popular",
+        "price": 599.99
+      },
+  
+      {
+        "_id": "642c155b2c4774f05c36e104",
+        "name": "Laptop Classic",
+        "details": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "image": "https://cdn.vox-cdn.com/thumbor/VQly1w93xlcWUnSPvMylJUirJlw=/0x0:2040x1360/1200x0/filters:focal(0x0:2040x1360):no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/22046471/vpavic_4291_20201113_0411.0.jpg",
+        "category": "laptop",
+        "price": 569.99
+      },
+  
+      {
+        "_id": "642c155b2c4774f05c36e105",
+        "name": "Laptop Classic",
+        "details": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "image": "https://cdn.vox-cdn.com/thumbor/YZ-pwzQDTrHm-WuX0GmbC1DmQUA=/0x0:2040x1360/768x512/filters:focal(1013x702:1014x703)/cdn.vox-cdn.com/uploads/chorus_asset/file/22965904/akrales_211028_4820_0659.jpg",
+        "category": "offer",
+        "price": 555.99
+      },
+    
+      {
+        "_id": "642c155b2c4774f05c36e106",
+        "name": "Laptop Classic",
+        "details": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "image": "https://nairametrics.com/wp-content/uploads/2022/02/Laptop-.jpg",
+        "category": "popular",
+        "price": 598.99
+      },
+      {
+        "_id": "642c155b2c4774f05c36e121",
+        "name": "Television X",
+        "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "image": "https://image.made-in-china.com/202f0j00CKDhotvGCJgP/Wholesale-Home-TV-43-FHD-Frameless-LCD-LED-TV-with-Digital-System-Smart-TV-Android-9-0-11-0.webp",
+        "category": "television",
+        "price": 699.99
+      },
+      {
+        "_id": "642c155b2c4774f05c36e122",
+        "name": "Television Pro",
+        "details": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_OonVgmilB6XIQXJl27suTy8BlBMWP7R8JF8EVHfSjIUmwNamEXQySWg75Fbm0OPpDZQ&usqp=CAU",
+        "category": "television",
+        "price": 899.99
+      },
+      {
+        "_id": "642c155b2c4774f05c36e123",
+        "name": "Television Max",
+        "details": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "image": "https://5.imimg.com/data5/AC/TM/MY-20343275/havells-led-television-98-cm-28l39fn2-29-500x500.png",
+        "category": "popular",
+        "price": 1099.99
+      },
+      {
+        "_id": "642c155b2c4774f05c36e124",
+        "name": "Television Ultra",
+        "details": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "image": "https://5.imimg.com/data5/SELLER/Default/2021/10/KP/FO/NL/46487814/40-inch-full-hd-led-tv-500x500.jpg",
+        "category": "television",
+        "price": 1299.99
+      },
+      {
+        "_id": "642c155b2c4774f05c36e125",
+        "name": "Television Lite",
+        "details": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFMt-5DqGxCCWsbbzTGXJ7Avomaun1Ub5ZRq93AM6VS0GV9qEvG1Hj0EvF5WDMdkEpRec&usqp=CAU",
+        "category": "television",
+        "price": 499.99
+      },
+      {
+        "_id": "642c155b2c4774f05c36e126",
+        "name": "Television Edge",
+        "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "image": "https://5.imimg.com/data5/AC/TM/MY-20343275/havells-led-television-98-cm-28l39fn2-29-500x500.png",
+        "category": "television",
+        "price": 799.99
+      },
+      {
+        "_id": "642c155b2c4774f05c36e127",
+        "name": "Television Prime",
+        "details": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_OonVgmilB6XIQXJl27suTy8BlBMWP7R8JF8EVHfSjIUmwNamEXQySWg75Fbm0OPpDZQ&usqp=CAU",
+        "category": "television",
+        "price": 699.99
+      },
+      {
+        "_id": "642c155b2c4774f05c36e128",
+        "name": "Television Neo",
+        "details": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFMt-5DqGxCCWsbbzTGXJ7Avomaun1Ub5ZRq93AM6VS0GV9qEvG1Hj0EvF5WDMdkEpRec&usqp=CAU",
+        "category": "television",
+        "price": 599.99
+      },
+      {
+        "_id": "642c155b2c4774f05c36e129",
+        "name": "Television Classic",
+        "details": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-8qdWW3tuZnpByEZbDsmURRkRSW-SUJZkFBSqOMri08uwprMnVcsO48dEWl93jDtBO7I&usqp=CAU",
+        "category": "television",
+        "price": 599.99
+      },
+  
+      {
+        "_id": "642c155b2c4774f05c36e1p1",
+        "name": "Television Classic",
+        "details": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "image": "https://5.imimg.com/data5/SELLER/Default/2021/10/KP/FO/NL/46487814/40-inch-full-hd-led-tv-500x500.jpg",
+        "category": "offer",
+        "price": 599.99
+      },
+     
+      {
+        "_id": "642c155b2c4774f05c36e1p2",
+        "name": "Television Classic",
+        "details": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFMt-5DqGxCCWsbbzTGXJ7Avomaun1Ub5ZRq93AM6VS0GV9qEvG1Hj0EvF5WDMdkEpRec&usqp=CAU",
+        "category": "television",
+        "price": 599.99
+      },
+    
+      {
+        "_id": "642c155b2c4774f05c36e1p3",
+        "name": "Television Classic",
+        "details": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "image": "https://5.imimg.com/data5/SELLER/Default/2021/10/KP/FO/NL/46487814/40-inch-full-hd-led-tv-500x500.jpg",
+        "category": "popular",
+        "price": 599.99
+      },
+  
+      {
+        "_id": "642c155b2c4774f05c36e1p4",
+        "name": "Television Classic",
+        "details": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "image": "https://5.imimg.com/data5/AC/TM/MY-20343275/havells-led-television-98-cm-28l39fn2-29-500x500.png",
+        "category": "laptop",
+        "price": 569.99
+      },
+  
+      {
+        "_id": "642c155b2c4774f05c36e1p5",
+        "name": "Television Classic",
+        "details": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_OonVgmilB6XIQXJl27suTy8BlBMWP7R8JF8EVHfSjIUmwNamEXQySWg75Fbm0OPpDZQ&usqp=CAU",
+        "category": "offer",
+        "price": 555.99
+      },
+    
+      {
+        "_id": "642c155b2c4774f05c36e1p6",
+        "name": "Television Classic",
+        "details": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "image": "https://image.made-in-china.com/202f0j00CKDhotvGCJgP/Wholesale-Home-TV-43-FHD-Frameless-LCD-LED-TV-with-Digital-System-Smart-TV-Android-9-0-11-0.webp",
+        "category": "popular",
+        "price": 598.99
+      },
+      {
+        "_id": "642c155b2c4774f05c36el11",
+        "name": "Washing-Machines X",
+        "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "image": "https://aws-obg-image-lb-5.tcl.com/content/dam/brandsite/region/in/blog/pc/detail/blog-march/washing-machine-dimensions/banner.jpg",
+        "category": "washing",
+        "price": 699.99
+      },
+      {
+        "_id": "642c155b2c4774f05c36el12",
+        "name": "Washing-Machines Pro",
+        "details": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "image": "https://eulaunch2022.tcl-eu.com/images/tild3432-3139-4363-b339-383235633438__lifestyle_mda_p2_1_1.png",
+        "category": "washing",
+        "price": 899.99
+      },
+      {
+        "_id": "642c155b2c4774f05c36el13",
+        "name": "Washing-Machines Max",
+        "details": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "image": "https://m.media-amazon.com/images/I/71Zz1+RGutL._AC_SL1500_.jpg",
+        "category": "popular",
+        "price": 1099.99
+      },
+      {
+        "_id": "642c155b2c4774f05c36el14",
+        "name": "Washing-Machines Ultra",
+        "details": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "image": "https://eulaunch2022.tcl-eu.com/images/tild3433-6236-4134-a139-363231656533__lifestyle_mda_p2_2_1.png",
+        "category": "washing",
+        "price": 1299.99
+      },
+      {
+        "_id": "642c155b2c4774f05c36el15",
+        "name": "Washing-Machines Lite",
+        "details": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "image": "https://eulaunch2022.tcl-eu.com/images/tild3432-3139-4363-b339-383235633438__lifestyle_mda_p2_1_1.png",
+        "category": "washing",
+        "price": 499.99
+      },
+      {
+        "_id": "642c155b2c4774f05c36el16",
+        "name": "Washing-Machines Edge",
+        "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "image": "https://m.media-amazon.com/images/I/71Zz1+RGutL._AC_SL1500_.jpg",
+        "category": "washing",
+        "price": 799.99
+      },
+      {
+        "_id": "642c155b2c4774f05c36el17",
+        "name": "Washing-Machines Prime",
+        "details": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "image": "https://eulaunch2022.tcl-eu.com/images/tild3433-6236-4134-a139-363231656533__lifestyle_mda_p2_2_1.png",
+        "category": "washing",
+        "price": 699.99
+      },
+      {
+        "_id": "642c155b2c4774f05c36el18",
+        "name": "Washing-Machines Neo",
+        "details": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "image": "https://eulaunch2022.tcl-eu.com/images/tild3432-3139-4363-b339-383235633438__lifestyle_mda_p2_1_1.png",
+        "category": "washing",
+        "price": 599.99
+      },
+      {
+        "_id": "642c155b2c4774f05c36el19",
+        "name": "Washing-Machines Classic",
+        "details": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "image": "https://aws-obg-image-lb-5.tcl.com/content/dam/brandsite/region/in/blog/pc/detail/blog-march/washing-machine-dimensions/banner.jpg",
+        "category": "washing",
+        "price": 599.99
+      },
+  
+      {
+        "_id": "642c155b2c4774f05c36el22",
+        "name": "Washing-Machines Classic",
+        "details": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "image": "https://m.media-amazon.com/images/I/71Zz1+RGutL._AC_SL1500_.jpg",
+        "category": "offer",
+        "price": 599.99
+      },
+     
+      {
+        "_id": "642c155b2c4774f05c36el33",
+        "name": "Washing-Machines Classic",
+        "details": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "image": "https://eulaunch2022.tcl-eu.com/images/tild3432-3139-4363-b339-383235633438__lifestyle_mda_p2_1_1.png",
+        "category": "washing",
+        "price": 599.99
+      },
+    
+      {
+        "_id": "642c155b2c4774f05c36el44",
+        "name": "Washing-Machines Classic",
+        "details": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "image": "https://aws-obg-image-lb-5.tcl.com/content/dam/brandsite/region/in/blog/pc/detail/blog-march/washing-machine-dimensions/banner.jpg",
+        "category": "popular",
+        "price": 599.99
+      },
+  
+      {
+        "_id": "642c155b2c4774f05c36el55",
+        "name": "Washing-Machines Classic",
+        "details": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "image": "https://eulaunch2022.tcl-eu.com/images/tild3433-6236-4134-a139-363231656533__lifestyle_mda_p2_2_1.png",
+        "category": "washing",
+        "price": 569.99
+      },
+  
+      {
+        "_id": "642c155b2c4774f05c36el66",
+        "name": "Washing-Machines Classic",
+        "details": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "image": "https://m.media-amazon.com/images/I/71Zz1+RGutL._AC_SL1500_.jpg",
+        "category": "offer",
+        "price": 555.99
+      },
+    
+      {
+        "_id": "642c155b2c4774f05c36ll88",
+        "name": "Washing-Machines Classic",
+        "details": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "image": "https://aws-obg-image-lb-5.tcl.com/content/dam/brandsite/region/in/blog/pc/detail/blog-march/washing-machine-dimensions/banner.jpg",
+        "category": "popular",
+        "price": 598.99
+      },
+      
+    {
+        "_id": "642c155b2c4774f05c36em82",
+        "name": "Air-Conditioner X",
+        "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7dCDa_u2vQDBFjCK5ljR4ntoWs4QMwyE4uU0jRiuscQ&s",
+        "category": "aircold",
+        "price": 699.99
+      },
+      {
+        "_id": "642c155b2c4774f05c36ep83",
+        "name": "Air-Conditioner Pro",
+        "details": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "image": "https://aws-obg-image-lb-2.tcl.com/content/dam/brandsite/global/images-for-blog/Different-Modes-in-Air-Conditioner-Fresh-Air-Gentle-Wind-I-Feel-Turbo-Sleep-Eco.jpg",
+        "category": "aircold",
+        "price": 899.99
+      },
+      {
+        "_id": "642c155b2c4774f05c36ep84",
+        "name": "Air-Conditioner Max",
+        "details": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "image": "https://www.lg.com/eastafrica/images/split-air-conditioners/md07571944/features/HA-MX-RAC-Winner-white-2023-02-1-desktop.jpg",
+        "category": "popular",
+        "price": 1099.99
+      },
+      {
+        "_id": "642c155b2c4774f05c36ep85",
+        "name": "Air-Conditioner Ultra",
+        "details": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "image": "https://static.toiimg.com/thumb/msid-76133820,width-1070,height-580,imgsize-151077,resizemode-75,overlay-toi_sw,pt-32,y_pad-40/photo.jpg",
+        "category": "aircold",
+        "price": 1299.99
+      },
+      {
+        "_id": "642c155b2c4774f05c36ep86",
+        "name": "Air-Conditioner Lite",
+        "details": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7dCDa_u2vQDBFjCK5ljR4ntoWs4QMwyE4uU0jRiuscQ&s",
+        "category": "aircold",
+        "price": 499.99
+      },
+      {
+        "_id": "642c155b2c4774f05c36eo86",
+        "name": "Air-Conditioner Edge",
+        "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "image": "https://aws-obg-image-lb-2.tcl.com/content/dam/brandsite/global/images-for-blog/Different-Modes-in-Air-Conditioner-Fresh-Air-Gentle-Wind-I-Feel-Turbo-Sleep-Eco.jpg",
+        "category": "aircold",
+        "price": 799.99
+      },
+      {
+        "_id": "642c155b2c4774f05c36ep87",
+        "name": "Air-Conditioner Prime",
+        "details": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "image": "https://www.lg.com/eastafrica/images/split-air-conditioners/md07571944/features/HA-MX-RAC-Winner-white-2023-02-1-desktop.jpg",
+        "category": "aircold",
+        "price": 699.99
+      },
+      {
+        "_id": "642c155b2c4774f05c36ep88",
+        "name": "Air-Conditioner Neo",
+        "details": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7dCDa_u2vQDBFjCK5ljR4ntoWs4QMwyE4uU0jRiuscQ&s",
+        "category": "aircold",
+        "price": 599.99
+      },
+      {
+        "_id": "642c155b2c4774f05c36ep11",
+        "name": "Air-Conditioner Classic",
+        "details": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "image": "https://aws-obg-image-lb-2.tcl.com/content/dam/brandsite/global/images-for-blog/Different-Modes-in-Air-Conditioner-Fresh-Air-Gentle-Wind-I-Feel-Turbo-Sleep-Eco.jpg",
+        "category": "aircold",
+        "price": 599.99
+      },
+  
+      {
+        "_id": "642c155b2c4774f05c36ep22",
+        "name": "Air-Conditioner Classic",
+        "details": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "image": "https://www.lg.com/eastafrica/images/split-air-conditioners/md07571944/features/HA-MX-RAC-Winner-white-2023-02-1-desktop.jpg",
+        "category": "offer",
+        "price": 599.99
+      },
+     
+      {
+        "_id": "642c155b2c4774f05c36ep33",
+        "name": "Air-Conditioner Classic",
+        "details": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "image": "https://static.toiimg.com/thumb/msid-76133820,width-1070,height-580,imgsize-151077,resizemode-75,overlay-toi_sw,pt-32,y_pad-40/photo.jpg",
+        "category": "aircold",
+        "price": 599.99
+      },
+    
+      {
+        "_id": "642c155b2c4774f05c36ep44",
+        "name": "Air-Conditioner Classic",
+        "details": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7dCDa_u2vQDBFjCK5ljR4ntoWs4QMwyE4uU0jRiuscQ&s",
+        "category": "popular",
+        "price": 599.99
+      },
+  
+      {
+        "_id": "642c155b2c4774f05c36ep55",
+        "name": "Air-Conditioner Classic",
+        "details": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "image": "https://static.toiimg.com/thumb/msid-76133820,width-1070,height-580,imgsize-151077,resizemode-75,overlay-toi_sw,pt-32,y_pad-40/photo.jpg",
+        "category": "aircold",
+        "price": 569.99
+      },
+  
+      {
+        "_id": "642c155b2c4774f05c36ep66",
+        "name": "Air-Conditioner Classic",
+        "details": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "image": "https://aws-obg-image-lb-2.tcl.com/content/dam/brandsite/global/images-for-blog/Different-Modes-in-Air-Conditioner-Fresh-Air-Gentle-Wind-I-Feel-Turbo-Sleep-Eco.jpg",
+        "category": "offer",
+        "price": 555.99
+      },
+    
+      {
+        "_id": "642c155b2c4774f05c36pl8p",
+        "name": "Air-Conditioner Classic",
+        "details": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7dCDa_u2vQDBFjCK5ljR4ntoWs4QMwyE4uU0jRiuscQ&s",
+        "category": "popular",
+        "price": 598.99
+      },
+      {
+        "_id": "642c155b2c4774f05c36pe82",
+        "name": "Kitchen X",
+        "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGywZ_3FGbQEApxDKZNuQ87RtA32xE76oVPD6jYRf_6Q&s",
+        "category": "kitchen",
+        "price": 699.99
+      },
+      {
+        "_id": "642c155b2c4774f05c36pe83",
+        "name": "Kitchen Pro",
+        "details": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "image": "https://www.hhhlibrary.org/sites/default/files/2021-10/Kitchen%20Tools.jpeg",
+        "category": "kitchen",
+        "price": 899.99
+      },
+      {
+        "_id": "642c155b2c4774f05c36pe84",
+        "name": "Kitchen Max",
+        "details": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "image": "https://imageio.forbes.com/specials-images/imageserve/615b7a2d10f14c6d90c57d56/Small-appliances-on-a-kitchen-countertop-/960x0.jpg?format=jpg&width=960",
+        "category": "popular",
+        "price": 1099.99
+      },
+      {
+        "_id": "642c155b2c4774f05c36pe85",
+        "name": "Kitchen Ultra",
+        "details": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "image": "https://img.buzzfeed.com/buzzfeed-static/static/2018-12/27/16/campaign_images/buzzfeed-prod-web-05/20-kitchen-products-from-walmart-that-literally-e-2-19399-1545945186-6_dblbig.jpg",
+        "category": "kitchen",
+        "price": 1299.99
+      },
+      {
+        "_id": "642c155b2c4774f05c36pp8p",
+        "name": "Kitchen Lite",
+        "details": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGywZ_3FGbQEApxDKZNuQ87RtA32xE76oVPD6jYRf_6Q&s",
+        "category": "kitchen",
+        "price": 499.99
+      },
+      {
+        "_id": "642c155b2c4774f05c36pe86",
+        "name": "Kitchen Edge",
+        "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "image": "https://www.hhhlibrary.org/sites/default/files/2021-10/Kitchen%20Tools.jpeg",
+        "category": "kitchen",
+        "price": 799.99
+      },
+      {
+        "_id": "642c155b2c4774f05c36pe87",
+        "name": "Kitchen Prime",
+        "details": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "image": "https://imageio.forbes.com/specials-images/imageserve/615b7a2d10f14c6d90c57d56/Small-appliances-on-a-kitchen-countertop-/960x0.jpg?format=jpg&width=960",
+        "category": "kitchen",
+        "price": 699.99
+      },
+      {
+        "_id": "642c155b2c4774f05c36pe88",
+        "name": "Kitchen Neo",
+        "details": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGywZ_3FGbQEApxDKZNuQ87RtA32xE76oVPD6jYRf_6Q&s",
+        "category": "kitchen",
+        "price": 599.99
+      },
+      {
+        "_id": "642c155b2c4774f05c36pe11",
+        "name": "Kitchen Classic",
+        "details": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "image": "https://img.buzzfeed.com/buzzfeed-static/static/2018-12/27/16/campaign_images/buzzfeed-prod-web-05/20-kitchen-products-from-walmart-that-literally-e-2-19399-1545945186-6_dblbig.jpg",
+        "category": "kitchen",
+        "price": 599.99
+      },
+  
+      {
+        "_id": "642c155b2c4774f05c36pe22",
+        "name": "Kitchen Classic",
+        "details": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "image": "https://www.hhhlibrary.org/sites/default/files/2021-10/Kitchen%20Tools.jpeg",
+        "category": "offer",
+        "price": 599.99
+      },
+     
+      {
+        "_id": "642c155b2c4774f05c36pe33",
+        "name": "Kitchen Classic",
+        "details": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "image": "https://imageio.forbes.com/specials-images/imageserve/615b7a2d10f14c6d90c57d56/Small-appliances-on-a-kitchen-countertop-/960x0.jpg?format=jpg&width=960",
+        "category": "kitchen",
+        "price": 599.99
+      },
+    
+      {
+        "_id": "642c155b2c4774f05c36pe44",
+        "name": "Kitchen Classic",
+        "details": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "image": "https://www.hhhlibrary.org/sites/default/files/2021-10/Kitchen%20Tools.jpeg",
+        "category": "popular",
+        "price": 599.99
+      },
+  
+      {
+        "_id": "642c155b2c4774f05c36pe55",
+        "name": "Kitchen Classic",
+        "details": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "image": "https://img.buzzfeed.com/buzzfeed-static/static/2018-12/27/16/campaign_images/buzzfeed-prod-web-05/20-kitchen-products-from-walmart-that-literally-e-2-19399-1545945186-6_dblbig.jpg",
+        "category": "kitchen",
+        "price": 569.99
+      },
+  
+      {
+        "_id": "642c155b2c4774f05c36pe66",
+        "name": "Kitchen Classic",
+        "details": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "image": "https://www.hhhlibrary.org/sites/default/files/2021-10/Kitchen%20Tools.jpeg",
+        "category": "offer",
+        "price": 555.99
+      },
+    
+      {
+        "_id": "642c155b2c4774f05c36pl88",
+        "name": "Kitchen Classic",
+        "details": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGywZ_3FGbQEApxDKZNuQ87RtA32xE76oVPD6jYRf_6Q&s",
+        "category": "popular",
+        "price": 598.99
+      },
+      {
+        "_id": "642c155b2c4774f05c36ep1p",
+        "name": "Phone X",
+        "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "image": "https://images-cdn.ubuy.co.in/63ca32eb868e293cfa392175-tablet-10-1-inch-android-3g-phone.jpg",
+        "category": "tablets",
+        "price": 699.99
+      },
+      {
+        "_id": "642c155b2c4774f05c36ep2p",
+        "name": "Phone Pro",
+        "details": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "image": "https://consumer.huawei.com/content/dam/huawei-cbg-site/common/mkt/plp/tablet-new/matepad-pro-series-card-1.jpg",
+        "category": "tablets",
+        "price": 899.99
+      },
+      {
+        "_id": "642c155b2c4774f05c36ep3p",
+        "name": "Phone Max",
+        "details": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "image": "https://shop.imel.ba/wp-content/uploads/2022/10/ZA9L0162BG.jpg",
+        "category": "popular",
+        "price": 1099.99
+      },
+      {
+        "_id": "642c155b2c4774f05c36ep4p",
+        "name": "Phone Ultra",
+        "details": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "image": "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_106028510/mobile_786_587_png/LENOVO-Tab-M9-9%22-64GB-WiFi-Sz%C3%BCrke-Tablet---tok-%C3%A9s-f%C3%B3lia-%28ZAC30027GR%29",
+        "category": "tablets",
+        "price": 1299.99
+      },
+      {
+        "_id": "642c155b2c4774f05c36ee5p",
+        "name": "Phone Lite",
+        "details": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "image": "https://images-cdn.ubuy.co.in/63ca32eb868e293cfa392175-tablet-10-1-inch-android-3g-phone.jpg",
+        "category": "tablets",
+        "price": 499.99
+      },
+      {
+        "_id": "642c155b2c4774f05c36eepp",
+        "name": "Phone Edge",
+        "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "image": "https://consumer.huawei.com/content/dam/huawei-cbg-site/common/mkt/plp/tablet-new/matepad-pro-series-card-1.jpg",
+        "category": "tablets",
+        "price": 799.99
+      },
+      {
+        "_id": "642c155b2c4774f05c36ee7p",
+        "name": "Phone Prime",
+        "details": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "image": "https://shop.imel.ba/wp-content/uploads/2022/10/ZA9L0162BG.jpg",
+        "category": "tablets",
+        "price": 699.99
+      },
+      {
+        "_id": "642c155b2c4774f05c36ee9p",
+        "name": "Phone Neo",
+        "details": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "image": "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_106028510/mobile_786_587_png/LENOVO-Tab-M9-9%22-64GB-WiFi-Sz%C3%BCrke-Tablet---tok-%C3%A9s-f%C3%B3lia-%28ZAC30027GR%29",
+        "category": "tablets",
+        "price": 599.99
+      },
+      {
+        "_id": "642c155b2c4774f05c36ee1p",
+        "name": "Phone Classic",
+        "details": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "image": "https://shop.imel.ba/wp-content/uploads/2022/10/ZA9L0162BG.jpg",
+        "category": "tablets",
+        "price": 599.99
+      },
+  
+      {
+        "_id": "642c155b2c4774f05c36ee2p",
+        "name": "Phone Classic",
+        "details": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "image": "https://consumer.huawei.com/content/dam/huawei-cbg-site/common/mkt/plp/tablet-new/matepad-pro-series-card-1.jpg",
+        "category": "offer",
+        "price": 599.99
+      },
+     
+      {
+        "_id": "642c155b2c4774f05c36ee3p",
+        "name": "Phone Classic",
+        "details": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "image": "https://shop.imel.ba/wp-content/uploads/2022/10/ZA9L0162BG.jpg",
+        "category": "tablets",
+        "price": 599.99
+      },
+    
+      {
+        "_id": "642c155b2c4774f05c36ee4p",
+        "name": "Phone Classic",
+        "details": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "image": "https://shop.imel.ba/wp-content/uploads/2022/10/ZA9L0162BG.jpg",
+        "category": "popular",
+        "price": 599.99
+      },
+  
+      {
+        "_id": "642c155b2c4774f05c36ep5p",
+        "name": "Phone Classic",
+        "details": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "image": "https://consumer.huawei.com/content/dam/huawei-cbg-site/common/mkt/plp/tablet-new/matepad-pro-series-card-1.jpg",
+        "category": "tablets",
+        "price": 569.99
+      },
+  
+      {
+        "_id": "642c155b2c4774f05c36ee6p",
+        "name": "Phone Classic",
+        "details": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "image": "https://consumer.huawei.com/content/dam/huawei-cbg-site/common/mkt/plp/tablet-new/matepad-pro-series-card-1.jpg",
+        "category": "laptop",
+        "price": 555.99
+      },
+    
+      {
+        "_id": "642c155b2c4774f05c36el8p",
+        "name": "Phone Classic",
+        "details": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "image": "https://images-cdn.ubuy.co.in/63ca32eb868e293cfa392175-tablet-10-1-inch-android-3g-phone.jpg",
+        "category": "popular",
+        "price": 598.99
+      }
+]
