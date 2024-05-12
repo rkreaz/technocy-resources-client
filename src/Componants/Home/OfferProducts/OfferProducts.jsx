@@ -1,5 +1,5 @@
 import offerImage from '../../../assets/offer/offer.jpg'
-import Offer from './Offer';
+import Cart from '../Cart/Cart';
 
 
 const OfferProducts = () => {
@@ -43,8 +43,8 @@ const OfferProducts = () => {
                         </div>
                     </div>
                 </div>
-                <div className='relative top-52 max-sm:top-[600px] left-44 max-sm:left-10 pb-64 max-sm:pb-[550px]'>
-                    <Offer></Offer>
+                <div className='relative top-60 max-sm:top-[600px] left-44 max-sm:left-10 pb-48 max-sm:pb-[550px]'>
+                   <Cart></Cart>
                 </div>
             </div>
 

@@ -1,10 +1,9 @@
 import offerImage1 from '../../../assets/offer/watch.jpg'
 import offerImage2 from '../../../assets/offer/laptop.jpg'
-// import offerImage3 from '../../../assets/offer/mobile.jpg'
 import offerImage4 from '../../../assets/offer/head-phone.jpg'
 import offerImage5 from '../../../assets/offer/g20.jpg'
 
-const Offer = () => {
+const Cart = () => {
     return (
         <div className='grid lg:grid-cols-4 gap-5 w-10/12  p-5 rounded-xl'>
 
@@ -53,4 +52,4 @@ const Offer = () => {
     );
 };
 
-export default Offer;
+export default Cart;

@@ -22,7 +22,7 @@ const Banner = () => {
 
                 <div id="slide1" className="carousel-item relative w-full">
                     <img src={banner1} className="w-full" />
-                    <div className="  absolute flex lg:items-center  bg-gradient-to-r from-indigo-500 via-[#ea1043e1] to-[rgba(21, 21, 21, 0)] h-full w-full justify-center">
+                    <div className="  absolute flex lg:items-center bg-gradient-to-r from-indigo-500 via-[#ea1043e1] to-[rgba(21, 21, 21, 0)] h-full w-full justify-center">
 
                         <div className=" space-y-5 max-sm:pl-8 max-sm:w-4/5 text-white max-sm:space-y-2 lg:space-y-7  md:w-9/12"
                             data-aos="zoom-in-down"
