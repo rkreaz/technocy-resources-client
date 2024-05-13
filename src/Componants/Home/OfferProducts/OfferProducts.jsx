@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import offerImage from '../../../assets/offer/offer.jpg'
 import Cart from '../Cart/Cart';
 
@@ -39,12 +40,14 @@ const OfferProducts = () => {
                                     sec
                                 </div>
                             </div>
-                            <button className="btn btn-slide-left px-8 py-3 max-sm:px-2 max-sm:py-1 rounded-full">Limited Offer</button>
+                            <Link to={'products/offer'}>
+                                <button className="btn btn-slide-left px-8 mt-5 py-3 max-sm:px-2 max-sm:py-1 rounded-full">Limited Offer</button>
+                            </Link>
                         </div>
                     </div>
                 </div>
                 <div className='relative top-60 max-sm:top-[600px] left-44 max-sm:left-10 pb-48 max-sm:pb-[550px]'>
-                   <Cart></Cart>
+                    <Cart></Cart>
                 </div>
             </div>
 

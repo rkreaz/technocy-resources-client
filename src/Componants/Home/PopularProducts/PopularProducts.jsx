@@ -20,7 +20,7 @@ const PopularProducts = () => {
             </div>
 
             <div className='text-center text-xl mt-10'>
-                <Link to={'/products'} className=" bg-[#F02757] hover:bg-[#BD1349] text-[#fff] px-6 py-3 max-sm:px-2 max-sm:py-1 rounded-full">See All Products</Link>
+                <Link to={'/products/popular'} className=" bg-[#F02757] hover:bg-[#BD1349] text-[#fff] px-6 py-3 max-sm:px-2 max-sm:py-1 rounded-full">See All Products</Link>
             </div>
         </div>
     );

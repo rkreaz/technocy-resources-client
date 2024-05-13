@@ -1,6 +1,9 @@
 a.link.link-hover {
     width: 100%;
 }
+a.link.link-hover:hover {
+    color: #F02757;
+}
 nav {
     width: 100%;
    

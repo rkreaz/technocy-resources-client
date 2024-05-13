@@ -1,0 +1,29 @@
+.activeCatMenu{
+    color: #F02757;
+  }
+  .page_bg button{
+    background-color: #F1F3F8;
+    color: black;
+    font-weight: 500;
+  }
+  
+  .page_bg button:hover{
+    background-color: #F02757;
+    color: #fff;
+  }
+  .page_option{
+    background-color: #F1F3F8;
+    color: black;
+    font-weight: 500;
+  }
+  .page_option:hover{
+    background-color: #F02757;
+    color: #fff;
+  }
+  .activePagination{
+    background-color: #F02757 !important;
+    color: #fff !important;
+  }
+  .btn.btn-disabled, .btn[disabled], .btn:disabled {
+    --tw-text-opacity: 1;
+}

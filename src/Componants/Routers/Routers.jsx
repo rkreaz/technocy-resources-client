@@ -19,7 +19,7 @@ import Contact from "../Contact/Contact";
             element: <Home></Home>,
         },
         {
-            path: '/products',
+            path: '/products/:category',
             element: <Products></Products>
         },
         {

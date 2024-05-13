@@ -5,10 +5,10 @@ const Product = ({ product }) => {
     return (
 
         <div>
-            <div className="card card-compact max-sm:w-full shadow-xl theme_text mt-16 h-[400px]">
-                <div className='border container'><img className="h-44 mx-auto" src={image} alt="Shoes" /></div>
-                <p className='text-[#fff] bg-[#F90101] absolute left-2 px-2
-     rounded-lg mr-2 mt-2'>{price}</p>
+            <div className="card card-compact max-sm:w-full shadow-xl theme_text h-[400px]">
+                <div className='border container rounded-xl'><img className="h-44 mx-auto " src={image} alt="Shoes" /></div>
+                <p className='text-[#fff] bg-[#F90101] absolute left-2 px-1 text-sm
+     rounded-lg mr-2 mt-2'>${price}</p>
                 <div className="card-body">
                     <h2 className="card-title text-2xl">{name}</h2>
                     <p>{details}</p>

@@ -7,14 +7,10 @@ import carIcon6 from '../../../assets/category/airconditioner-removebg-preview.p
 import carIcon7 from '../../../assets/category/kitchen.png'
 import Marquee from "react-fast-marquee";
 
-
-
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import "aos/dist/aos.css";
-
-
 
 const Categories = () => {
     useEffect(() => {
