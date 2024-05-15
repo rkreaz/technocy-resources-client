@@ -4,9 +4,12 @@ import './navbar.css'
 import { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../providers/AuthProviders';
 import logoMan from '../../../assets/icon/profile.png'
+import { FaShoppingCart } from 'react-icons/fa';
+import useCart from '../../Hooks/useCart';
 
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
+    const [cart] = useCart();
     const getThemeData = localStorage.getItem('theme');
     const [checked, setChecked] = useState(JSON.parse(getThemeData) || false);
 
@@ -43,7 +46,6 @@ const Navbar = () => {
 
         <NavLink to={'/extra'} className="navbar_button">Extra</NavLink>
 
-
     </>
 
     return (
@@ -75,8 +77,12 @@ const Navbar = () => {
                     {/* <Link>
                         <p className="text-lg font-semibold text-[#000] hover:text-[#EA1044] cursor-pointer max-sm:text-base">Login</p>
                     </Link> */}
+                    <button className="flex gap-1 mr-4">
+                        <FaShoppingCart className='text-xl text-[#F02757]'></FaShoppingCart>
+                        <div className="badge bg-[#F02757] border-0 text-[#fff]">+{cart.length}</div>
+                    </button>
                     <div>
-                    {
+                        {
                             user?.email ?
                                 <>
                                     <div className="dropdown">

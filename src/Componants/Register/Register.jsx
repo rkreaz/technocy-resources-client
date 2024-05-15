@@ -8,14 +8,10 @@ import { AuthContext } from "../providers/AuthProviders";
 import Swal from "sweetalert2";
 
 
-
-
-
 const Register = () => {
     const { register, handleSubmit, reset, formState: { errors }, } = useForm();
     const { createUser, updateUserProfile } = useContext(AuthContext);
     const navigate = useNavigate()
-
 
     const onSubmit = data => {
         console.log(data);
