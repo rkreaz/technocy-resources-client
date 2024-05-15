@@ -1,15 +1,21 @@
 import { Helmet } from "react-helmet-async";
 import loginImg from '../../assets/image/shop.jpg'
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaFacebook, FaGithub, FaGoogle } from "react-icons/fa";
 import { LoadCanvasTemplate, loadCaptchaEnginge, validateCaptcha } from 'react-simple-captcha';
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../providers/AuthProviders";
+import Swal from "sweetalert2";
 
 const Login = () => {
     // const  captchaRef  = useRef(null);
     const [disable, setDisable] = useState(true);
     const { login } = useContext(AuthContext);
+    const navigate = useNavigate();
+    const location = useLocation();
+
+    const from = location.state?.from?.pathname || '/';
+    console.log(from);
 
     const handleRegister = event => {
         event.preventDefault();
@@ -18,10 +24,15 @@ const Login = () => {
         const password = form.password.value;
         console.log(email, password);
         login(email, password)
-        .then(result => {
-            const user = result.user;
-            console.log(user);
-        })
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+                Swal.fire({
+                    title: "User Login SuccessFul",
+                    icon: "success"
+                });
+                navigate(from, { replace: true })
+            })
     }
 
     useEffect(() => {

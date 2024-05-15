@@ -1,18 +1,20 @@
 import { Helmet } from "react-helmet-async";
 import registerImg from '../../assets/image/shop.jpg'
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FaFacebook, FaGithub, FaGoogle } from "react-icons/fa";
 import { useForm } from "react-hook-form";
 import { useContext } from "react";
 import { AuthContext } from "../providers/AuthProviders";
+import Swal from "sweetalert2";
 
 
 
 
 
 const Register = () => {
-    const { register, handleSubmit, formState: { errors }, } = useForm();
-    const { createUser } = useContext(AuthContext);
+    const { register, handleSubmit, reset, formState: { errors }, } = useForm();
+    const { createUser, updateUserProfile } = useContext(AuthContext);
+    const navigate = useNavigate()
 
 
     const onSubmit = data => {
@@ -21,6 +23,22 @@ const Register = () => {
             .then(result => {
                 const loggedUser = result.user;
                 console.log(loggedUser);
+                updateUserProfile(data.name, data.photo)
+                    .then(() => {
+                        console.log('User Profile Is Update');
+                        reset();
+                        Swal.fire({
+                            position: "top-end",
+                            icon: "success",
+                            title: "User Profile Updated SuccessFul",
+                            showConfirmButton: false,
+                            timer: 1500
+                        });
+                        navigate('/')
+                    })
+                    .catch((error) => {
+                        console.log(error);
+                    });
             })
     };
 

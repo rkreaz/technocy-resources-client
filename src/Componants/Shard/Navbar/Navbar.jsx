@@ -41,6 +41,8 @@ const Navbar = () => {
         <NavLink to={'/products/popular'} className="navbar_button">Products</NavLink>
         <NavLink to={'/contact'} className="navbar_button">Contact</NavLink>
 
+        <NavLink to={'/extra'} className="navbar_button">Extra</NavLink>
+
 
     </>
 

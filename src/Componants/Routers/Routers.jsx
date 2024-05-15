@@ -9,6 +9,8 @@ import Contact from "../Contact/Contact";
 import ProductDetails from "../Home/ProductDetails/ProductDetails";
 import Login from "../Login/Login";
 import Register from "../Register/Register";
+import Extra from "../Extra/Extra";
+import PrivetRoute from "./PrivetRoute";
 
 
 export const router = createBrowserRouter([
@@ -40,6 +42,10 @@ export const router = createBrowserRouter([
       {
         path: '/register',
         element: <Register></Register>
+      },
+      {
+        path: '/extra',
+        element: <PrivetRoute><Extra></Extra></PrivetRoute>
       }
     ]
   },
