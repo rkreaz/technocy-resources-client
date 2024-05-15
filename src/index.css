@@ -21,9 +21,9 @@ body.white_mood .theme {
 
   .btn {
     border: none;
-    font-size: 16px;
+    font-size: 18px;
     text-transform: lowercase !important;
-    font-weight: 300;
+    font-weight: 400;
     background-color: transparent;
     transition: all 0.5s ease;
     cursor:pointer;

@@ -1,11 +1,20 @@
 import { NavLink } from 'react-router-dom';
 import logoIcon from '../../../assets/logo/logo.svg';
 import './navbar.css'
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
+import { AuthContext } from '../../providers/AuthProviders';
+import logoMan from '../../../assets/icon/profile.png'
 
 const Navbar = () => {
+    const { user, logOut } = useContext(AuthContext);
     const getThemeData = localStorage.getItem('theme');
     const [checked, setChecked] = useState(JSON.parse(getThemeData) || false);
+
+    const handleLogOut = () => {
+        logOut()
+            .then(() => { })
+            .catch(error => console.log(error))
+    }
 
     useEffect(() => {
         localStorage.setItem('theme', checked)
@@ -31,6 +40,8 @@ const Navbar = () => {
         <NavLink to={'/'} className="navbar_button ">Home</NavLink>
         <NavLink to={'/products/popular'} className="navbar_button">Products</NavLink>
         <NavLink to={'/contact'} className="navbar_button">Contact</NavLink>
+
+
     </>
 
     return (
@@ -48,7 +59,7 @@ const Navbar = () => {
                             <img className='' src={logoIcon} alt="" />
                         </div>
                     </div>
-                    
+
                 </div>
                 {/* <div className='lg:hidden'>
                     <img className='max-sm:h-8 max-sm:w-32' src={logoIcon} alt="" />
@@ -59,7 +70,32 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="flex items-center">
-                    <a className="text-lg font-semibold text-[#000] hover:text-[#EA1044] cursor-pointer max-sm:text-base">Login</a>
+                    {/* <Link>
+                        <p className="text-lg font-semibold text-[#000] hover:text-[#EA1044] cursor-pointer max-sm:text-base">Login</p>
+                    </Link> */}
+                    <div>
+                    {
+                            user?.email ?
+                                <>
+                                    <div className="dropdown">
+                                        <div tabIndex={0} role="button">
+                                            <div>
+                                                <img className="rounded-full w-10 h-10" src={user?.photoURL ? user.photoURL : `${logoMan}`} />
+                                            </div>
+                                        </div>
+                                        <div tabIndex={0} className="profile_tab dropdown-content z-[1] card card-compact max-w-64 shadow bg-[#EE6585] text-primary-content mt-2">
+                                            <div className="card-body text-center">
+                                                <img className="w-16 h-16 rounded-full mx-auto" src={user?.photoURL ? user?.photoURL : `${logoMan}`} />
+                                                <h3 className="text-[#fff] text-xl font-semibold">{user.displayName}</h3>
+                                                <p className="text-[#fff] text-base font-semibold">{user.email}</p>
+                                                <h2 onClick={handleLogOut} className="bg-[#F02757] text-[#fff] hover:bg-[#BD1349] text-lg font-semibold rounded-lg py-1 cursor-pointer">Log Out</h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </>
+                                : <NavLink className={"navMenu"} to='/login'>Login</NavLink>
+                        }
+                    </div>
 
                     <div className="form-control ml-3 mr-5">
                         <label className="swap swap-rotate">
