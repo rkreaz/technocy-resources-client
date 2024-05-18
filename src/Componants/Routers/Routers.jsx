@@ -11,6 +11,10 @@ import Login from "../Login/Login";
 import Register from "../Register/Register";
 import Extra from "../Extra/Extra";
 import PrivetRoute from "./PrivetRoute";
+import Dashboard from "../Layout/Dashboard";
+import DashboardCart from "../Dashboard/DashboardCart/DashboardCart";
+import AddProduct from "../Dashboard/AddProduct/AddProduct";
+import AdminHome from "../Dashboard/AdminHome/AdminHome";
 
 
 export const router = createBrowserRouter([
@@ -49,4 +53,22 @@ export const router = createBrowserRouter([
       }
     ]
   },
+  {
+    path: '/dashboard',
+    element: <Dashboard></Dashboard>,
+    children: [
+      {
+        path: '/dashboard/adminHome',
+        element: <AdminHome></AdminHome>
+      },
+      {
+        path: '/dashboard/dashboardCart',
+        element: <DashboardCart></DashboardCart>
+      },
+      {
+        path: '/dashboard/addProduct',
+        element: <AddProduct></AddProduct>
+      }
+    ]
+  }
 ]);

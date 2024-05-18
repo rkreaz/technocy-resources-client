@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import logoIcon from '../../../assets/logo/logo.svg';
 import './navbar.css'
 import { useContext, useEffect, useState } from 'react';
@@ -77,10 +77,12 @@ const Navbar = () => {
                     {/* <Link>
                         <p className="text-lg font-semibold text-[#000] hover:text-[#EA1044] cursor-pointer max-sm:text-base">Login</p>
                     </Link> */}
-                    <button className="flex gap-1 mr-4">
-                        <FaShoppingCart className='text-xl text-[#F02757]'></FaShoppingCart>
-                        <div className="badge bg-[#F02757] border-0 text-[#fff]">+{cart.length}</div>
-                    </button>
+                    <Link to={'/dashboard/dashboardCart'}>
+                        <button className="flex gap-1 mr-4">
+                            <FaShoppingCart className='text-xl text-[#F02757]'></FaShoppingCart>
+                            <div className="badge bg-[#F02757] border-0 text-[#fff]">+{cart.length}</div>
+                        </button>
+                    </Link>
                     <div>
                         {
                             user?.email ?
