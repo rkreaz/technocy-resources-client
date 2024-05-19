@@ -6,31 +6,41 @@ import { useForm } from "react-hook-form";
 import { useContext } from "react";
 import { AuthContext } from "../providers/AuthProviders";
 import Swal from "sweetalert2";
+import useAxiosPublic from "../Hooks/useAxiosPublic";
 
 
 const Register = () => {
     const { register, handleSubmit, reset, formState: { errors }, } = useForm();
-    const { createUser, updateUserProfile } = useContext(AuthContext);
-    const navigate = useNavigate()
+    const { createUser, updateUserProfile, loginWithGoogle } = useContext(AuthContext);
+    const navigate = useNavigate();
+    const axiosPublic = useAxiosPublic();
 
     const onSubmit = data => {
-        console.log(data);
         createUser(data.email, data.password)
             .then(result => {
                 const loggedUser = result.user;
                 console.log(loggedUser);
                 updateUserProfile(data.name, data.photo)
                     .then(() => {
-                        console.log('User Profile Is Update');
-                        reset();
-                        Swal.fire({
-                            position: "top-end",
-                            icon: "success",
-                            title: "User Profile Updated SuccessFul",
-                            showConfirmButton: false,
-                            timer: 1500
-                        });
-                        navigate('/')
+                        // console.log('User Profile Is Update');
+                        const userInfo = {
+                            name: data.name,
+                            email: data.email
+                        }
+                        axiosPublic.post('/users', userInfo)
+                            .then(res => {
+                                if (res.data.insertedId) {
+                                    reset();
+                                    Swal.fire({
+                                        position: "top-end",
+                                        icon: "success",
+                                        title: "User Profile Updated SuccessFul",
+                                        showConfirmButton: false,
+                                        timer: 1500
+                                    });
+                                    navigate('/')
+                                }
+                            })
                     })
                     .catch((error) => {
                         console.log(error);
@@ -38,8 +48,21 @@ const Register = () => {
             })
     };
 
-    const handleLoginWithGoogle = () => {
-        console.log('handle Login With Google');
+    const handleRegisterWithGoogle = () => {
+        // console.log('handle Login With Google');
+        loginWithGoogle()
+        .then(result => {
+            console.log(result.user);
+            const userinfo ={
+                email: result.user?.email,
+                name: result.user?.displayName
+            }
+            axiosPublic.post('/users', userinfo)
+            .then(res => {
+                console.log(res.data);
+            })
+
+        })
     }
 
     return (
@@ -131,9 +154,11 @@ const Register = () => {
                             <h2 className='text-xl font-semibold mt-5'>Or sign in with</h2>
                             <div className='flex gap-5 justify-center items-center mb-11 mt-8'>
 
-                                <a onClick={handleLoginWithGoogle} className="btn btn-slide-left"> <FaGoogle className='text-[#444444] text-2xl'></FaGoogle></a>
-                                <a className="btn btn-slide-left"><FaFacebook className='text-[#444444] text-2xl'></FaFacebook></a>
-                                <a className="btn btn-slide-left"><FaGithub className='text-[#444444] text-2xl'></FaGithub> </a>
+                                <a onClick={handleRegisterWithGoogle} className="border p-3 rounded-full text-[#FCD050] hover:bg-[#F02757] hover:text-[#fff]"> <FaGoogle className='text-2xl'></FaGoogle></a>
+
+                                <a className="border p-3 rounded-full text-[#0866FF] hover:bg-[#F02757] hover:text-[#fff]"><FaFacebook className='text-2xl'></FaFacebook></a>
+
+                                <a className="border p-3 rounded-full text-[#0866FF] hover:bg-[#F02757] hover:text-[#fff]"><FaGithub className='text-2xl'></FaGithub> </a>
                             </div>
                         </div>
 

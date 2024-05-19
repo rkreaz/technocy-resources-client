@@ -15,6 +15,12 @@ import Dashboard from "../Layout/Dashboard";
 import DashboardCart from "../Dashboard/DashboardCart/DashboardCart";
 import AddProduct from "../Dashboard/AddProduct/AddProduct";
 import AdminHome from "../Dashboard/AdminHome/AdminHome";
+import AllProducts from "../Dashboard/AllProducts/AllProducts";
+import AllUsers from "../Dashboard/AllUsers/AllUsers";
+import MyProfile from "../Dashboard/MyProfile/MyProfile";
+import Payment from "../Dashboard/Payment/Payment";
+import PaymentHistory from "../Dashboard/PaymentHistory/PaymentHistory";
+import AddReview from "../Dashboard/AddReview/AddReview";
 
 
 export const router = createBrowserRouter([
@@ -55,20 +61,48 @@ export const router = createBrowserRouter([
   },
   {
     path: '/dashboard',
-    element: <Dashboard></Dashboard>,
+    element: <PrivetRoute><Dashboard></Dashboard></PrivetRoute>,
     children: [
+      // admin related
       {
         path: '/dashboard/adminHome',
         element: <AdminHome></AdminHome>
       },
       {
-        path: '/dashboard/dashboardCart',
+        path: '/dashboard/addProduct',
+        element: <AddProduct></AddProduct>
+      },
+      {
+        path: '/dashboard/allProducts',
+        element: <AllProducts></AllProducts>
+      },
+      {
+        path: '/dashboard/allUsers',
+        element: <AllUsers></AllUsers>
+      },
+
+       // user related
+
+       {
+        path: '/dashboard/myProfile',
+        element: <MyProfile></MyProfile>
+      },
+      {
+        path: '/dashboard/orderProduct',
         element: <DashboardCart></DashboardCart>
       },
       {
-        path: '/dashboard/addProduct',
-        element: <AddProduct></AddProduct>
-      }
+        path: '/dashboard/payment',
+        element: <Payment></Payment>
+      },
+      {
+        path: '/dashboard/paymentHistory',
+        element: <PaymentHistory></PaymentHistory>
+      },
+      {
+        path: '/dashboard/addReview',
+        element: <AddReview></AddReview>
+      },
     ]
   }
 ]);

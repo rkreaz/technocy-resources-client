@@ -4,6 +4,7 @@ import useCart from "../../Hooks/useCart";
 import { RiDeleteBinLine } from "react-icons/ri";
 import Swal from "sweetalert2";
 import useAxiosSecure from "../../Hooks/useAxiosSecure";
+import { FaArrowRight } from "react-icons/fa";
 // import { RiDeleteBinLine } from "react-icons/ri";
 
 const DashboardCart = () => {
@@ -27,11 +28,11 @@ const DashboardCart = () => {
                     .then(res => {
                         console.log(res.data);
                         if (res.data.deletedCount > 0) {
-                              Swal.fire({
+                            Swal.fire({
                                 title: "Deleted!",
                                 text: "Your file has been deleted.",
                                 icon: "success"
-                              });
+                            });
                         }
                         refetch()
                     })
@@ -46,7 +47,7 @@ const DashboardCart = () => {
                 <div className="lg:w-9/12">
                     <div className="">
                         {
-                            card.map((item, index) => <div key={item._id}>
+                            card.length ? card.map((item, index) => <div key={item._id}>
                                 <div className=" bg-[#F1F3F8] mt-2 px-8 max-sm:px-4 py-4  text-[#000]">
                                     <div className="flex items-center justify-between">
                                         <div className="flex items-center gap-4">
@@ -60,7 +61,16 @@ const DashboardCart = () => {
                                     </div>
                                 </div>
 
-                            </div>)
+                            </div>) :
+
+                                <div className="text-center">
+                                    <h3 className="text-xl max-sm:text-sm">There are no orders placed yet. Please add to card.</h3>
+                                    <Link to={'/products/popular'}>
+                                        <button className="text-center btn btn-slide-left px-4 py-0 max-sm:px-2 max-sm:py-1 rounded-full mt-12 ">CONTINUE SHOPPING <FaArrowRight className="text-base mt-2"></FaArrowRight ></button>
+                                    </Link>
+                                </div>
+
+
                         }
                     </div>
                 </div>

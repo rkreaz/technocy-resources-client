@@ -1,13 +1,15 @@
 import { NavLink, Outlet } from "react-router-dom";
 import { IoMdMenu } from "react-icons/io";
-import { FaHome } from "react-icons/fa";
+import { FaCartPlus, FaCcApplePay, FaHistory, FaHome, FaShoppingCart, FaUser, FaUsers } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { AiOutlineProduct } from "react-icons/ai";
 import logoIcon from '../../../src/assets/logo/logo.svg';
 import useCart from "../Hooks/useCart";
+import { VscPreview } from "react-icons/vsc";
 
 const Dashboard = () => {
     const [card] = useCart();
+    const isAdmin = true;
     return (
         <div className="theme">
             <div className="max-w-6xl mx-auto">
@@ -28,11 +30,32 @@ const Dashboard = () => {
                                     <img className='w-full h-6' src={logoIcon} alt="" />
                                 </div>
 
-                                <NavLink className='px-2 flex items-center gap-3 border hover:bg-[#F02757] hover:text-[#FFFFFF] p-1 rounded-xl' to={'/dashboard/adminHome'}><FaHome></FaHome>AdminHome</NavLink>
+                                {
+                                    isAdmin ? <>
+                                        <NavLink className='px-2 flex items-center gap-3 border hover:bg-[#F02757] hover:text-[#FFFFFF] p-1 rounded-xl' to={'/dashboard/adminHome'}><FaHome></FaHome>Admin Home</NavLink>
 
-                                <NavLink className='px-2 flex items-center gap-3 border hover:bg-[#F02757] hover:text-[#FFFFFF] p-1 rounded-xl' to={'/dashboard/dashboardCart'}><FaHome></FaHome>Order Product({card.length})</NavLink>
+                                        <NavLink className='px-2 flex items-center gap-3 border hover:bg-[#F02757] hover:text-[#FFFFFF] p-1 rounded-xl' to={'/dashboard/addProduct'}><FaCartPlus></FaCartPlus>Add Product</NavLink>
 
-                                <NavLink className='px-2 flex items-center gap-3 border hover:bg-[#F02757] hover:text-[#FFFFFF] p-1 rounded-xl' to={'/dashboard/addProduct'}><FaHome></FaHome>AddProduct</NavLink>
+                                        <NavLink className='px-2 flex items-center gap-3 border hover:bg-[#F02757] hover:text-[#FFFFFF] p-1 rounded-xl' to={'/dashboard/allProducts'}><FaShoppingCart></FaShoppingCart>All Products</NavLink>
+
+                                        <NavLink className='px-2 flex items-center gap-3 border hover:bg-[#F02757] hover:text-[#FFFFFF] p-1 rounded-xl' to={'/dashboard/allUsers'}><FaUsers></FaUsers>All Users</NavLink>
+
+                                    </>
+                                        :
+                                        <>
+                                            <NavLink className='px-2 flex items-center gap-3 border hover:bg-[#F02757] hover:text-[#FFFFFF] p-1 rounded-xl' to={'/dashboard/myProfile'}><FaUser></FaUser>My Profile</NavLink>
+
+                                            <NavLink className='px-2 flex items-center gap-3 border hover:bg-[#F02757] hover:text-[#FFFFFF] p-1 rounded-xl' to={'/dashboard/orderProduct'}><FaShoppingCart></FaShoppingCart>Order Product({card.length})</NavLink>
+
+                                            <NavLink className='px-2 flex items-center gap-3 border hover:bg-[#F02757] hover:text-[#FFFFFF] p-1 rounded-xl' to={'/dashboard/payment'}><FaCcApplePay></FaCcApplePay>Payment</NavLink>
+
+                                            <NavLink className='px-2 flex items-center gap-3 border hover:bg-[#F02757] hover:text-[#FFFFFF] p-1 rounded-xl' to={'/dashboard/paymentHistory'}><FaHistory></FaHistory>Payment History</NavLink>
+
+                                            <NavLink className='px-2 flex items-center gap-3 border hover:bg-[#F02757] hover:text-[#FFFFFF] p-1 rounded-xl' to={'/dashboard/addReview'}><VscPreview></VscPreview>Add Review</NavLink>
+
+                                            
+                                        </>
+                                }
 
                                 <p className='pb-10'></p>
                                 <p className='border-t-2 border-bg-[#F02757] pb-10'></p>
@@ -51,7 +74,7 @@ const Dashboard = () => {
                     </div>
 
 
-                    <div>
+                    <div className="flex-1">
                         <Outlet></Outlet>
                     </div>
                 </div>

@@ -6,13 +6,15 @@ import { LoadCanvasTemplate, loadCaptchaEnginge, validateCaptcha } from 'react-s
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../providers/AuthProviders";
 import Swal from "sweetalert2";
+import useAxiosPublic from "../Hooks/useAxiosPublic";
 
 const Login = () => {
     // const  captchaRef  = useRef(null);
     const [disable, setDisable] = useState(true);
-    const { login } = useContext(AuthContext);
+    const { login, loginWithGoogle } = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
+    const axiosPublic = useAxiosPublic();
 
     const from = location.state?.from?.pathname || '/';
     console.log(from);
@@ -52,7 +54,20 @@ const Login = () => {
 
 
     const handleLoginWithGoogle = () => {
-        console.log('handle Login With Google');
+        // console.log('handle Login With Google');
+        loginWithGoogle()
+        .then(result => {
+            console.log(result.user);
+            const userinfo ={
+                email: result.user?.email,
+                name: result.user?.displayName
+            }
+            axiosPublic.post('/users', userinfo)
+            .then(res => {
+                console.log(res.data);
+            })
+
+        })
     }
 
     return (
