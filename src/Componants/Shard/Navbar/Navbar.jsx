@@ -63,7 +63,6 @@ const Navbar = () => {
                             <img className='' src={logoIcon} alt="" />
                         </div>
                     </div>
-
                 </div>
                 {/* <div className='lg:hidden'>
                     <img className='max-sm:h-8 max-sm:w-32' src={logoIcon} alt="" />
