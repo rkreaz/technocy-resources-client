@@ -76,7 +76,7 @@ const Navbar = () => {
                     {/* <Link>
                         <p className="text-lg font-semibold text-[#000] hover:text-[#EA1044] cursor-pointer max-sm:text-base">Login</p>
                     </Link> */}
-                    <Link to={'/dashboard/orderProduct'}>
+                    <Link to={'/dashboard'}>
                         <button className="flex gap-1 mr-4">
                             <FaShoppingCart className='text-xl text-[#F02757]'></FaShoppingCart>
                             <div className="badge bg-[#F02757] border-0 text-[#fff]">+{cart.length}</div>

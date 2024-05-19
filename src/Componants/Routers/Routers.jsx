@@ -21,6 +21,7 @@ import MyProfile from "../Dashboard/MyProfile/MyProfile";
 import Payment from "../Dashboard/Payment/Payment";
 import PaymentHistory from "../Dashboard/PaymentHistory/PaymentHistory";
 import AddReview from "../Dashboard/AddReview/AddReview";
+import AdminRoute from "./AdminRoute";
 
 
 export const router = createBrowserRouter([
@@ -66,24 +67,23 @@ export const router = createBrowserRouter([
       // admin related
       {
         path: '/dashboard/adminHome',
-        element: <AdminHome></AdminHome>
+        element: <AdminRoute><AdminHome></AdminHome></AdminRoute>
       },
       {
         path: '/dashboard/addProduct',
-        element: <AddProduct></AddProduct>
+        element: <AdminRoute><AddProduct></AddProduct></AdminRoute>
       },
       {
         path: '/dashboard/allProducts',
-        element: <AllProducts></AllProducts>
+        element: <AdminRoute><AllProducts></AllProducts></AdminRoute>
       },
       {
         path: '/dashboard/allUsers',
-        element: <AllUsers></AllUsers>
+        element: <AdminRoute><AllUsers></AllUsers></AdminRoute>
       },
 
-       // user related
-
-       {
+      // user related
+      {
         path: '/dashboard/myProfile',
         element: <MyProfile></MyProfile>
       },

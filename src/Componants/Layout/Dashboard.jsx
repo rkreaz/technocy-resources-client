@@ -6,10 +6,11 @@ import { AiOutlineProduct } from "react-icons/ai";
 import logoIcon from '../../../src/assets/logo/logo.svg';
 import useCart from "../Hooks/useCart";
 import { VscPreview } from "react-icons/vsc";
+import useAdmin from "../Hooks/useAdmin";
 
 const Dashboard = () => {
     const [card] = useCart();
-    const isAdmin = true;
+    const [isAdmin] = useAdmin();
     return (
         <div className="theme">
             <div className="max-w-6xl mx-auto">

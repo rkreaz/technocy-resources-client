@@ -51,18 +51,27 @@ const Register = () => {
     const handleRegisterWithGoogle = () => {
         // console.log('handle Login With Google');
         loginWithGoogle()
-        .then(result => {
-            console.log(result.user);
-            const userinfo ={
-                email: result.user?.email,
-                name: result.user?.displayName
-            }
-            axiosPublic.post('/users', userinfo)
-            .then(res => {
-                console.log(res.data);
-            })
+            .then(result => {
+                console.log(result.user);
+                const userinfo = {
+                    email: result.user?.email,
+                    name: result.user?.displayName
+                }
+                axiosPublic.post('/users', userinfo)
+                    .then(res => {
+                        console.log(res.data);
+                        Swal.fire({
+                            title: "Success",
+                            text: "Your Google Login has been successfully.",
+                            icon: "success"
+                        });
+                        navigate(location?.state ? location?.state : '/')
 
-        })
+                    })
+            })
+            .catch(error => {
+                console.log(error);
+            })
     }
 
     return (

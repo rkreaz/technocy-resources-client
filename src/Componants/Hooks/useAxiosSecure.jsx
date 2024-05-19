@@ -29,9 +29,7 @@ const useAxiosSecure = () => {
             navigate('/login')
         }
         return Promise.reject(error);
-    })
-
-
+    });
 
     return axiosSecure;
 };
