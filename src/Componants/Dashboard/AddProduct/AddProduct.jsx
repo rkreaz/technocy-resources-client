@@ -30,15 +30,15 @@ const AddProduct = () => {
                             </div>
                             <select defaultValue={'default'} {...register("category", { required: true })} className="select select-bordered w-full bg-[#f3eeee] text-[#000]">
                                 <option disabled value={'default'}>Select a Category</option>
-                                <option value="salad">popular</option>
-                                <option value="pizza">aircold</option>
-                                <option value="soup">laptop</option>
-                                <option value="dessert">offer</option>
-                                <option value="drinks">tablets</option>
-                                <option value="popular">kitchen</option>
-                                <option value="popular">television</option>
-                                <option value="popular">phone</option>
-                                <option value="popular">washing</option>
+                                <option value="popular">Popular</option>
+                                <option value="aircold">aircold</option>
+                                <option value="Laptop">laptop</option>
+                                <option value="offer">Offer</option>
+                                <option value="tablets">Tablets</option>
+                                <option value="kitchen">Kitchen</option>
+                                <option value="television">Television</option>
+                                <option value="phone">Phone</option>
+                                <option value="washing">Washing</option>
                             </select>
                         </label>
 

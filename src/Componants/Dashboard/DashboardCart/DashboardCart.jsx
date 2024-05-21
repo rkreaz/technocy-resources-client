@@ -99,7 +99,7 @@ const DashboardCart = () => {
                         {/* <h2 className=' text-xl font-bold'>total price: ${totalPrice}</h2> */}
 
                         <div className="text-center text-sm">
-                            {card.length ? <Link to={'/dashboard/reservation'}>
+                            {card.length ? <Link to={'/dashboard/payment'}>
                                 <p className='bg-[#F02757] text-[#fff] font-semibold p-3 rounded-lg'>PROCEED TO CHECKOUT ({card.length}) </p>
                             </Link>
                                 :
