@@ -9,7 +9,9 @@ const AdminRoute = ({ children }) => {
     const location = useLocation();
 
     if (loading || isPending) {
-        return <span className="loading loading-spinner text-error"></span>;
+        return <div className="text-center mt-10">
+            <span className="loading loading-spinner text-error"></span>
+        </div>;
     }
 
     if (user && isAdmin) {

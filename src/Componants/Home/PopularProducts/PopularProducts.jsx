@@ -1,11 +1,10 @@
 
 import { Link } from 'react-router-dom';
-import useProducts from '../../Hooks/useProducts';
 import Product from '../../Product/Product';
+import useSingleCategory from '../../Hooks/useSingleCategory';
 
 const PopularProducts = () => {
-    const [allProducts] = useProducts();
-    const popularProducts = allProducts.filter(popular => popular.category === 'popular');
+    const [singleCategory, isLoading] = useSingleCategory('popular');
 
     return (
         <div className='max-w-6xl mx-auto mt-14'>
@@ -14,8 +13,9 @@ const PopularProducts = () => {
             </div>
             <div className='grid lg:grid-cols-4 gap-5  p-5 rounded-xl'>
 
-                {
-                    popularProducts.slice(0, 8).map(popular => <Product key={popular._id} product={popular}></Product>)
+                {isLoading ? <div className='text-2xl text-center'><span className="loading loading-spinner text-error"></span></div> :
+                    singleCategory.slice(0, 8).map(popular => <Product key={popular._id} product={popular}></Product>)
+
                 }
             </div>
 
