@@ -3,14 +3,14 @@ import useAxiosPublic from "./useAxiosPublic";
 
 const useAllCategory = () => {
     const axiosPublic = useAxiosPublic();
-    const { data: allCategory = [], } = useQuery({
+    const { data: allCategory = [], refetch} = useQuery({
         queryKey: ['category'],
         queryFn: async () => {
             const res = await axiosPublic.get(`/category`)
             return res.data;
         }
     })
-    return [allCategory]
+    return [allCategory, refetch]
 };
 
 export default useAllCategory;

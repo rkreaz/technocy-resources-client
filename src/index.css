@@ -2,22 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body.white_mood .theme {
-    background: #fff !important;
-  }
-  
-  body.dark_mood .theme {
-    background: #000 !important;
-  }
-  
-  
-  body.white_mood .theme_text {
-    color: #000 !important
-  }
-  
-  body.dark_mood .theme_text {
-    color: #fff !important
-  }
 
   .btn {
     border: none;
