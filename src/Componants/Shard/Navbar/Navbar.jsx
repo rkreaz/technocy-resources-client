@@ -6,12 +6,14 @@ import { AuthContext } from '../../providers/AuthProviders';
 import logoMan from '../../../assets/icon/profile.png'
 import { FaShoppingCart } from 'react-icons/fa';
 import useCart from '../../Hooks/useCart';
+import useAdmin from '../../Hooks/useAdmin';
 
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
     const [cart] = useCart();
     const getThemeData = localStorage.getItem('theme');
     const [checked, setChecked] = useState(JSON.parse(getThemeData) || false);
+    const [isAdmin] = useAdmin();
 
     const handleLogOut = () => {
         logOut()
@@ -46,6 +48,13 @@ const Navbar = () => {
 
         <NavLink to={'/extra'} className="navbar_button">Extra</NavLink>
 
+        {
+            user && isAdmin && <NavLink className='navbar_button' to={'/dashboard/adminHome'}>Dashboard</NavLink>
+        }
+        {
+            user && !isAdmin && <NavLink className='navbar_button' to={'/dashboard/myProfile'}>Dashboard</NavLink>
+        }
+
     </>
 
     return (
@@ -76,7 +85,7 @@ const Navbar = () => {
                     {/* <Link>
                         <p className="text-lg font-semibold text-[#000] hover:text-[#EA1044] cursor-pointer max-sm:text-base">Login</p>
                     </Link> */}
-                    <Link to={'/dashboard'}>
+                    <Link>
                         <button className="flex gap-1 mr-4">
                             <FaShoppingCart className='text-xl text-[#F02757]'></FaShoppingCart>
                             <div className="badge bg-[#F02757] border-0 text-[#fff]">+{cart.length}</div>

@@ -11,6 +11,9 @@ import useAdmin from "../Hooks/useAdmin";
 const Dashboard = () => {
     const [card] = useCart();
     const [isAdmin] = useAdmin();
+    const price = card.reduce((total, item) => total + item.price, 0);
+    const totalPrice = price.toFixed(2);
+    
     return (
         <div className="theme">
             <div className="max-w-6xl mx-auto">
@@ -48,7 +51,7 @@ const Dashboard = () => {
 
                                             <NavLink className='px-2 flex items-center gap-3 border hover:bg-[#F02757] hover:text-[#FFFFFF] p-1 rounded-xl' to={'/dashboard/orderProduct'}><FaShoppingCart></FaShoppingCart>Order Product({card.length})</NavLink>
 
-                                            <NavLink className='px-2 flex items-center gap-3 border hover:bg-[#F02757] hover:text-[#FFFFFF] p-1 rounded-xl' to={'/dashboard/payment'}><FaCcApplePay></FaCcApplePay>Payment</NavLink>
+                                            <NavLink className='px-2 flex items-center gap-3 border hover:bg-[#F02757] hover:text-[#FFFFFF] p-1 rounded-xl' to={'/dashboard/payment'}><FaCcApplePay></FaCcApplePay>Payment$({totalPrice})</NavLink>
 
                                             <NavLink className='px-2 flex items-center gap-3 border hover:bg-[#F02757] hover:text-[#FFFFFF] p-1 rounded-xl' to={'/dashboard/paymentHistory'}><FaHistory></FaHistory>Payment History</NavLink>
 

@@ -103,7 +103,7 @@ const DashboardCart = () => {
                                 <p className='bg-[#F02757] text-[#fff] font-semibold p-3 rounded-lg'>PROCEED TO CHECKOUT ({card.length}) </p>
                             </Link>
                                 :
-                                <p disabled className='bg-[#271e12] text-[#998f81] font-semibold p-3 rounded-lg'>PROCEED TO CHECKOUT ({card.length}) </p>
+                                <p disabled className='bg-[#af2243dc] text-[#c7bfbf] font-semibold p-3 rounded-lg'>PROCEED TO CHECKOUT ({card.length}) </p>
                             }
                         </div>
 

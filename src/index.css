@@ -77,3 +77,4 @@ div:where(.swal2-container) h2:where(.swal2-title) {
 div:where(.swal2-container) .swal2-html-container {
   font-size: 15px !important;
 }
+
