@@ -14,7 +14,8 @@ const PaymentForm = () => {
     const elements = useElements();
     const [cart, refetch] = useCart();
     const price = cart.reduce((total, item) => total + item.price, 0);
-    const totalPrice = price.toFixed(2);
+    const totalPrice = Number(price.toFixed(2));
+    // console.log('My Total Price',totalPrice);
     const axiosPublic = useAxiosPublic();
     const { user } = useAuth();
 

@@ -9,20 +9,20 @@ const Contact = () => {
             </Helmet>
 
             <div>
-                <div className="hero min-h-screen" style={{ backgroundImage: 'url(https://i.ibb.co/kJnHzgS/shop.png)' }}>
+                <div className="hero lg:h-[600px] max-md:h-[400px] md:h-[400px] max-sm:h-[300px] lg:pt-20 max-sm:pt-28 max-md:pt-16" style={{ backgroundImage: 'url(https://i.ibb.co/W5jCYrn/Screenshot-54.png)' }}>
                     <div className="hero-overlay bg-opacity-50"></div>
                     <div className="hero-content text-center text-neutral-content">
                         <div className="max-w-md">
-                            <h1 className="mb-5 text-5xl text-[#F02757] font-bold">Get In Touch</h1>
+                            <h1 className="mb-5 text-5xl max-sm:text-2xl text-[#F02757] font-bold">Get In Touch</h1>
 
                         </div>
                     </div>
                 </div>
 
-                <div className="max-w-6xl mx-auto mt-20 pb-20">
-                    <div className="flex  items-center gap-16 theme_text">
+                <div className="max-w-6xl mx-auto lg:mt-20 lg:pb-20 max-sm:mt-10">
+                    <div className="flex max-sm:flex-col items-center gap-10 p-5">
                         <div className="space-y-5">
-                            <h1 className="mb-5 text-5xl font-bold">Write us a letter</h1>
+                            <h1 className="lg:text-5xl text-[#000] text-center max-sm:text-2xl md:text-3xl max-md:text-3xl mb-5 text-5xl font-bold">Write us a letter</h1>
                             <p>Reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
                             <div className="flex gap-5">
                                 <input type="text" placeholder="Name*" className="input bg-[#fff] input-bordered w-full" /><input type="text" placeholder="Email Address" className="input bg-[#fff] input-bordered w-full" />
@@ -31,7 +31,7 @@ const Contact = () => {
                             <input className="bg-[#F02757] hover:bg-[#BD1349] text-[#fff] px-6 py-3 max-sm:px-2 max-sm:py-1 rounded-xl" type="submit" value="Submit" />
                         </div>
 
-                        <div className="grid grid-cols-2 gap-5">
+                        <div className="grid lg:grid-cols-2 gap-5 max-sm:text-center">
                             <div>
                                 <h1 className="mb-5 text-xl font-bold">ADDRESS</h1>
                                 <p>Stand Bazer, Karaniganj, <br />

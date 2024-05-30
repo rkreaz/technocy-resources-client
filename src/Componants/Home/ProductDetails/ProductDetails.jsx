@@ -1,13 +1,20 @@
-import { NavLink, useParams } from "react-router-dom";
+import { NavLink, useNavigate, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import useSingleProducts from "../../Hooks/useSingleProducts";
-// import { useState } from "react";
 import useSingleCategory from "../../Hooks/useSingleCategory";
 import useAllCategory from "../../Hooks/useAllCategory";
+import useAxiosSecure from "../../Hooks/useAxiosSecure";
+import useAuth from "../../Hooks/useAuth";
+import useCart from "../../Hooks/useCart";
+import Swal from "sweetalert2";
 
 const ProductDetails = () => {
     const [allCategory] = useAllCategory();
     const { id, category } = useParams();
+    const axiosSecure = useAxiosSecure();
+    const { user } = useAuth();
+    const navigate = useNavigate();
+    const [, refetch] = useCart()
     
 
     const [singleProduct, loadingSingleProduct] = useSingleProducts(id);
@@ -21,6 +28,50 @@ const ProductDetails = () => {
         </div>
     }
 
+    const handleAddToCard = (offer) => {
+        const { _id, name, image, price, } = offer;
+        console.log(offer);
+        if (user && user.email) {
+            const cartItem = {
+                productId: _id,
+                email: user.email,
+                name,
+                image,
+                price
+            }
+            axiosSecure.post('/carts', cartItem)
+                .then(res => {
+                    console.log(res.data);
+                    if (res.data.insertedId) {
+                        Swal.fire({
+                            position: "top",
+                            icon: "success",
+                            title: `${name} Add to your cart`,
+                            showConfirmButton: false,
+                            timer: 1500
+                        });
+                        refetch();
+                    }
+                })
+        }
+        else {
+            Swal.fire({
+                title: "You are not logged in!",
+                text: "You won't be able to revert this!",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#3085d6",
+                cancelButtonColor: "#d33",
+                confirmButtonText: "Please login"
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    navigate('/login', { state: { from: location } })
+                }
+            });
+        }
+    }
+
+
     return (
         <div>
             <div className="max-w-6xl mx-auto pb-20">
@@ -28,10 +79,10 @@ const ProductDetails = () => {
                     <title>Technocy | Details</title>
                 </Helmet>
                 <div className="w-full flex pt-24 gap-5">
-                    <div className="w-3/12 flex flex-col items-center bg-[#1D232A] p-5">
-                        <h2 className="font-bold text-2xl text-[#000000] mb-5 mt-5">Product categories</h2>
+                    <div className="w-3/12 flex flex-col items-center bg-[#F1F3F8] p-5">
+                        <h2 className="font-bold text-2xl text-[#000] mb-5 mt-5">Product categories</h2>
                         {
-                            allCategory.length ? allCategory.map((listItem, index) => <NavLink className='text-lg font-semibold m-1 border w-full text-center py-2 hover:bg-[#F02757] hover:text-[#fff] mt-2 rounded-lg' to={`/products/${listItem?.name}`} key={index}>{listItem.name}</NavLink>) : ''
+                            allCategory.length ? allCategory.map((listItem, index) => <NavLink className='text-lg  font-semibold text-[#000] m-1 border w-full text-center py-2 hover:bg-[#F02757] hover:text-[#fff] mt-2 rounded-lg' to={`/products/${listItem?.name}`} key={index}>{listItem.name}</NavLink>) : ''
                         }
                     </div>
 
@@ -42,11 +93,11 @@ const ProductDetails = () => {
                             </div>
 
                             <div className=" w-1/2">
-                                <h2 className="text-3xl text-[#fff]]">Product Name: {singleProduct?.name}</h2>
-                                <p className='text-[#fff] text-4xl mt-5'>${singleProduct?.price}</p>
+                                <h2 className="text-3xl font-semibold text-[#000]">Product Name: {singleProduct?.name}</h2>
+                                <p className='text-[#000] text-4xl font-semibold mt-5'>${singleProduct?.price}</p>
                                 <p className="mt-5">{singleProduct?.details}</p>
-                                <p className="mt-5 text-xl">Category: {singleProduct?.category}</p>
-                                <button className="btn btn-slide-left px-4 py-0 max-sm:px-2 max-sm:py-1 rounded-full mt-10">Add to Card</button>
+                                <p className="mt-5 text-xl font-medium">Category: {singleProduct?.category}</p>
+                                <button onClick={() => handleAddToCard(singleProduct)} className="btn btn-slide-left px-4 py-0 max-sm:px-2 max-sm:py-1 rounded-full mt-10 w-1/2">Add to Card</button>
                             </div>
                         </div>
 
@@ -63,7 +114,7 @@ const ProductDetails = () => {
                                                 <div className="card-body">
                                                     <h2 className="card-title text-2xl">{cate.name}</h2>
                                                     <p>{cate.details}</p>
-                                                    <button className="btn btn-slide-left px-4 py-0 max-sm:px-2 max-sm:py-1 rounded-full mt-4">Add to Card</button>
+                                                    <button onClick={() => handleAddToCard(cate)} className="btn btn-slide-left px-4 py-0 max-sm:px-2 max-sm:py-1 rounded-full mt-4">Add to Card</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -75,6 +126,7 @@ const ProductDetails = () => {
                     </div>
                 </div>
             </div>
+            <p className='border-b-2 border-red-500 mt-10'></p>
         </div>
     );
 };

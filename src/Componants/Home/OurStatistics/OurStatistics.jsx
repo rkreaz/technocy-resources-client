@@ -1,51 +1,51 @@
-import offerImage from '../../../assets/offer/offer.jpg'
+import HomePageTitle from '../../HomePageTitle/HomePageTitle';
 
 const OurStatistics = () => {
     return (
-        <div className="max-w-6xl mx-auto">
-            <div className="max-w-6xl mx-auto mt-20 pb-20 ">
-                <div className="">
-                    <div className='flex flex-col lg:flex-row gap-10'>
-                        <div className=' space-y-5 w-full max-sm:text-center'>
-                            <h1 className="text-3xl font-bold theme_text">Professional Service & Care
+        <div className="">
+            <div className="max-w-6xl mx-auto">
+                  <HomePageTitle
+                     Heading={'Our Statistics'}
+                  ></HomePageTitle>
+                <div className="lg:mt-20">
+                    <div className='flex flex-col lg:flex-row gap-10 p-5'>
+                        <div className=' space-y-5 w-full text-center'>
+                            <h1 className="lg:text-5xl text-[#000] font-bold text-center mb-3 max-sm:text-2xl md:text-3xl max-md:text-3xl">Professional Service & Care
                                 In A Pleasant Ambience</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan</p>
-                            <button className="btn btn-slide-left px-8 py-3 max-sm:px-2 max-sm:py-1 rounded-full">Limited Offer</button>
-                            <div className="stats shadow bg-gradient-to-r from-indigo-500 via-[#ea1043e1] to-[rgba(21, 21, 21, 0)]">
+                            <p className='lg:text-base max-sm:text-sm'>Ensuring every customer feels valued and appreciated. Our dedicated team of experts is committed to providing top-notch assistance, tailored to meet your individual needs and preferences. We believe that a welcoming and comfortable environment is essential for a satisfying shopping experience, which is why we have meticulously designed our store to be both inviting and functional. Whether you are seeking the latest in electronics or need expert advice, our friendly staff is here to make your visit enjoyable and successful.</p>
+                            
+                            <div className="stats shadow bg-gradient-to-r from-[#6465EF] to-[#F02757] text-white">
 
                                 <div className="stat place-items-center">
-                                    <div className="stat-title">Downloads</div>
-                                    <div className="stat-value">31K</div>
-                                    <div className="stat-desc">From January 1st to February 1st</div>
+                                    <div className="stat-value max-sm:text-xl">31K</div>
+                                    <div className="stat-title text-[#000] mt-2 max-sm:text-sm">Downloads</div>
                                 </div>
 
                                 <div className="stat place-items-center">
-                                    <div className="stat-title">Users</div>
-                                    <div className="stat-value text-secondary">4,200</div>
-                                    <div className="stat-desc text-secondary">↗︎ 40 (2%)</div>
+                                    <div className="stat-value max-sm:text-xl">4,200</div>
+                                    <div className="stat-title text-[#000] mt-2 max-sm:text-sm">Downloads</div>
                                 </div>
 
                                 <div className="stat place-items-center">
-                                    <div className="stat-title">New Registers</div>
-                                    <div className="stat-value">1,200</div>
-                                    <div className="stat-desc">↘︎ 90 (14%)</div>
+                                    <div className="stat-value max-sm:text-xl">1,200</div>
+                                    <div className="stat-title text-[#000] mt-2 max-sm:text-sm">Downloads</div>
                                 </div>
 
                             </div>
                         </div>
 
-                        <div className='grid grid-cols-2 gap-5 w-full p-10 bg-[#e3315292] rounded-xl'>
-                            <div className='container'>
-                                <img src={offerImage} className="" />
+                        <div className='grid grid-cols-2 gap-5 w-full rounded-xl'>
+                            <div className='container bg-[#F1F3F8] rounded-xl'>
+                                <img src="https://i.ibb.co/8M1c6PW/cat-1.jpg" className="" />
                             </div>
-                            <div className='container'>
-                                <img src={offerImage} className="" />
+                            <div className='container bg-[#F1F3F8] rounded-xl'>
+                                <img src="https://i.ibb.co/C7cM0y0/cat-2.jpg" className="" />
                             </div>
-                            <div className='container'>
-                                <img src={offerImage} className="" />
+                            <div className='container bg-[#F1F3F8] rounded-xl'>
+                                <img src="https://i.ibb.co/pP1S45f/cat-4.jpg" className="" />
                             </div>
-                            <div className='container'>
-                                <img src={offerImage} className="" />
+                            <div className='container bg-[#F1F3F8] rounded-xl'>
+                                <img src="https://i.ibb.co/pXmW9L1/cat-3.jpg" className="" />
                             </div>
                         </div>
                     </div>

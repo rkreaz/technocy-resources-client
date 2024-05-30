@@ -1,52 +1,54 @@
 import { Link } from 'react-router-dom';
-import offerImage from '../../../assets/offer/offer.jpg'
+import offerImage from '../../../assets/offer/Offered.png'
 import Cart from '../Cart/Cart';
+import HomePageTitle from '../../HomePageTitle/HomePageTitle';
+
+import Countdown from "react-countdown";
+
+const Completionist = () => <span>You are good to go!</span>;
 
 
 const OfferProducts = () => {
+    const renderer = ({ days, hours, minutes, seconds, completed }) => {
+        if (completed) {
+            // Render a completed state
+            return <Completionist />;
+        } else {
+            // Render a countdown
+            return <div className=''>
+                <span className='text-6xl max-sm:text-4xl text-[#F02757] font-bold'>{days}: {hours}: {minutes}: {seconds}</span>
+            </div>;
+        }
+    };
     return (
-        <div className="max-w-6xl mx-auto mt-20 pb-20 ">
+        <div className="max-w-6xl mx-auto mt-20 lg:pb-20 max-sm:pb-5 ">
+
             <div className="">
-                <div className="absolute">
+                <HomePageTitle Heading={'Offer Products'}
+                ></HomePageTitle>
+                <div className="absolute mt-4">
                     <div className='flex flex-col lg:flex-row gap-10'>
-                        <div className='container'>
+                        <div className='container bg-[#F1F3F8]'>
                             <img src={offerImage} className="" />
                         </div>
-                        <div className=' space-y-5 p-5 w-full max-sm:text-center'>
-                            <h1 className="text-3xl font-bold theme_text">Weekly Sale on 35%</h1>
-                            <div className="grid grid-flow-col gap-5 text-center auto-cols-max max-sm:justify-center">
-                                <div className="flex flex-col">
-                                    <span className="countdown font-mono text-5xl">
-                                        <span style={{ "--value": 15 }}></span>
-                                    </span>
-                                    days
-                                </div>
-                                <div className="flex flex-col">
-                                    <span className="countdown font-mono text-5xl">
-                                        <span style={{ "--value": 10 }}></span>
-                                    </span>
-                                    hours
-                                </div>
-                                <div className="flex flex-col">
-                                    <span className="countdown font-mono text-5xl">
-                                        <span style={{ "--value": 24 }}></span>
-                                    </span>
-                                    min
-                                </div>
-                                <div className="flex flex-col">
-                                    <span className="countdown font-mono text-5xl">
-                                        <span style={{ "--value": 55 }}></span>
-                                    </span>
-                                    sec
-                                </div>
-                            </div>
+                        <div className=' p-5 w-full max-sm:text-center'>
+
                             <Link to={'products/offer'}>
-                                <button className="btn btn-slide-left px-8 mt-5 py-3 max-sm:px-2 max-sm:py-1 rounded-full">Limited Offer</button>
+                                <button className="btn btn-slide-left px-8 py-3 max-sm:px-2 max-sm:py-1 rounded-full">Limited Offer</button>
                             </Link>
+
+                            <h1 className="lg:text-5xl text-[#000] font-bold text-center max-sm:text-2xl md:text-3xl max-md:text-3xl mt-5 mb-5">Weekly Sale on <span className='text-[#F02757]'>35%</span></h1>
+
+                            <div>
+                                <Countdown date={Date.now() + 5000000000}
+                                    renderer={renderer}
+                                />
+                            </div>
+
                         </div>
                     </div>
                 </div>
-                <div className='relative top-60 max-sm:top-[600px] left-44 max-sm:left-10 pb-48 max-sm:pb-[550px]'>
+                <div className='relative top-60 max-sm:top-[600px] left-44 max-sm:left-0 pb-48 max-sm:pb-[550px]'>
                     <Cart></Cart>
                 </div>
             </div>
