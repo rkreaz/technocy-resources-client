@@ -46,8 +46,7 @@ const AddProduct = () => {
         }
     }
     return (
-        <div>
-            <h1 className="text-3xl">Dashboard Add Product</h1>
+        <div className="p-5">
             <div className='lg:px-20 lg:mt-16 max-sm:mt-5 mr-5'>
                 <form className='space-y-6' onSubmit={handleSubmit(onSubmit)}>
 

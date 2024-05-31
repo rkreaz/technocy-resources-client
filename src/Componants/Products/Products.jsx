@@ -41,15 +41,15 @@ const Products = () => {
                 </Helmet>
                 <div className="w-full flex pt-28 gap-5">
                     <div className="w-3/12 flex flex-col items-center bg-[#F1F3F8] p-5">
-                        <h2 className="font-bold text-2xl text-[#000000] mb-5 mt-5">Product categories</h2>
+                        <h2 className="font-bold text-2xl max-sm:text-lg text-[#000000] mb-5 mt-5">Product categories</h2>
                         {
-                            allCategory.length ? allCategory.map((listItem, index) => <NavLink onClick={() => setPage(0)} className='text-lg font-semibold m-1 border w-full text-center py-2 hover:bg-[#F02757] hover:text-[#fff] mt-2 rounded-lg' to={`/products/${listItem?.name}`} key={index}>{listItem?.name}</NavLink>) : ''
+                            allCategory.length ? allCategory.map((listItem, index) => <NavLink onClick={() => setPage(0)} className='text-lg  max-sm:text-sm font-semibold m-1 border w-full text-center py-2 hover:bg-[#F02757] hover:text-[#fff] mt-2 rounded-lg' to={`/products/${listItem?.name}`} key={index}>{listItem?.name}</NavLink>) : ''
                         }
                     </div>
 
 
                     <div className="w-9/12">
-                        <h2 className="font-bold text-2xl text-[#000] mb-8">Products</h2>
+                        <h2 className="font-bold text-2xl max-sm:text-lg text-[#000] mb-8">Products</h2>
                         <div className=' grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-5 rounded-xl'>
                             {
                                 singleCategory.slice(page * limit, limit * (page + 1)).map(product => <Product key={product._id} product={product}></Product>)

@@ -57,13 +57,13 @@ const Cart = () => {
         }
     }
     return (
-        <div className=' grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-5 rounded-xl lg:w-10/12  p-5 '>
+        <div className=' grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-5 rounded-xl lg:w-10/12 p-5 '>
 
             {
                 isLoading ?
                     <div className='text-2xl text-center'><span className="loading loading-spinner text-error"></span></div> :
                     singleCategory.slice(0, 4).map(offer => <div key={offer._id}>
-                        <div className="card card-compact w-56  max-sm:w-full shadow-xl bg-[#F1F3F8] h-[400px]">
+                        <div className="card card-compact w-56  max-sm:w-full md:w-full shadow-xl bg-[#F1F3F8] h-[400px]">
 
                             <div className='border container rounded-xl'>
                                 <img className=" h-36 mx-auto" src={offer.image} alt="Shoes" />

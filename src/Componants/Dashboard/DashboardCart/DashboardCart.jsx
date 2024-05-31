@@ -41,10 +41,10 @@ const DashboardCart = () => {
     }
 
     return (
-        <div className="mr-5">
-            <h1 className="text-2xl font-bold  text-[#000] mt-10 mb-5">Order Products:</h1>
-            <div className="lg:flex gap-5">
-                <div className="lg:w-9/12">
+        <div className="mr-5 px-5">
+            <h1 className="text-2xl font-bold  text-[#000] lg:mt-10 max-sm:mt-5 mb-5">Order Products:</h1>
+            <div className="md:flex justify-between  gap-5">
+                <div className="md:w-9/12">
                     <div className="">
                         {
                             card.length ? card.map((item, index) => <div key={item._id}>

@@ -99,15 +99,15 @@ const PaymentForm = () => {
     }
 
     return (
-        <div className="flex gap-5 mt-20 w-full">
-            <div className=" w-3/4">
+        <div className="flex max-sm:flex-col gap-5 lg:mt-10 max-sm:mt-5 w-full p-5">
+            <div className="lg:w-3/4 md:w-3/5 ">
                 <h2 className='text-center text-2xl font-bold w-full mb-10'>Pay With Card</h2>
                 <form onSubmit={handleSubmit}>
                     <CardElement className="border p-3 rounded-xl border-red-600"
                         options={{
                             style: {
                                 base: {
-                                    fontSize: '18px',
+                                    fontSize: '15px',
                                     color: '#000',
                                     '::placeholder': {
                                         color: '#000',

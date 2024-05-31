@@ -62,11 +62,11 @@ const AllUsers = () => {
             {/* <h1 className="text-3xl">Admin All Users: {users.length}</h1> */}
 
             <div className="flex justify-around bg-[#F02757] text-[#fff] text-lg p-5 mt-10 w-full">
-                <h4 className="w-1/12">Num</h4>
-                <h4 className="w-1/5">Name</h4>
-                <h4 className=" w-2/6">Email</h4>
-                <h4 className=" ">Role</h4>
-                <h4 className="">Delete</h4>
+                <h4 className="w-1/12  max-sm:text-sm">Num</h4>
+                <h4 className="w-1/5  max-sm:text-sm">Name</h4>
+                <h4 className=" w-2/6  max-sm:text-sm">Email</h4>
+                <h4 className="  max-sm:text-sm">Role</h4>
+                <h4 className=" max-sm:text-sm">Delete</h4>
             </div>
 
             {
@@ -74,14 +74,14 @@ const AllUsers = () => {
                     <div className=" bg-[#F1F3F8] mt-2 px-8 max-sm:px-4 py-4  text-[#000]">
                         <div className="flex items-center justify-around">
                             <p className="w-1/12">{index + 1}</p>
-                            <h3 className="max-sm:text-sm w-1/5">{user.name}</h3>
-                            <h3 className="max-sm:text-sm w-2/6">{user.email}</h3>
+                            <h3 className="max-sm:text-sm w-1/4">{user.name}</h3>
+                            <h3 className="max-sm:text-sm w-1/2">{user.email}</h3>
 
                            {
-                            user.role === 'admin' ? 'Admin' :  <p onClick={() => handleMakeAdmin(user)} className='bg-[#3D6ED7] p-2 rounded-lg'>  <FaUsers className=' text-[#fff]'></FaUsers></p>
+                            user.role === 'admin' ? 'Admin' :  <p onClick={() => handleMakeAdmin(user)} className='bg-[#3D6ED7] p-2 rounded-lg  max-sm:text- max-sm:text-xs'>  <FaUsers className=' text-[#fff]  max-sm:text-xs'></FaUsers></p>
                            }
 
-                            <p onClick={() => handleDeleteUsers(user._id)} className='bg-[#F02757] p-2 rounded-lg '>  <RiDeleteBinLine className=' text-[#fff]'></RiDeleteBinLine></p>
+                            <p onClick={() => handleDeleteUsers(user._id)} className='bg-[#F02757] p-2 rounded-lg '>  <RiDeleteBinLine className=' text-[#fff]  max-sm:text-xs'></RiDeleteBinLine></p>
 
                         </div>
                     </div>

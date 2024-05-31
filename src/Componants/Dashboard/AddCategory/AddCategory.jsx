@@ -43,7 +43,7 @@ const axiosSecure = useAxiosSecure();
                             </div>
 
                          
-                        <div className="form-control mt-10 w-1/3 mx-auto">
+                        <div className="form-control mt-10 lg:w-1/3 max-md:w-1/2 max-sm:w-9/12 md:w-1/3 mx-auto">
                             <button className="btn btn-slide-left rounded-full">Add Category</button>
 
                         </div>

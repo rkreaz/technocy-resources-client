@@ -20,7 +20,7 @@ const Dashboard = () => {
                 <div className="lg:flex gap-5">
                     <div className="lg:drawer-open">
                         <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-                        <div className="drawer-content flex flex-col items-center justify-center px-3">
+                        <div className="drawer-content w-1/6 flex flex-col justify-center px-3 p-2">
                             {/* Page content here */}
                             <label htmlFor="my-drawer-2" className="text-3xl px-4 py-1 hover:bg-[#F02757] text-[#F02757] hover:text-[#FFFFFF] lg:hidden rounded-xl cursor-pointer"><IoMdMenu></IoMdMenu></label>
                         </div>

@@ -8,7 +8,7 @@ import ProductUpdate from "../ProductUpdate/ProductUpdate";
 
 const AllProducts = () => {
     const [page, setPage] = useState(0);
-    const [limit, setLimit] = useState(10);
+    const [limit, setLimit] = useState(30);
     const [singleProductStore, setSingleProductStore] = useState({});
     const [allProducts, loadingAllProduct, refetch] = useProducts(limit, page);
     const axiosSecure = useAxiosSecure();
@@ -63,13 +63,13 @@ const AllProducts = () => {
             {/* <h1 className="text-3xl">Admin All Users: {users.length}</h1> */}
 
             <div className="flex justify-between bg-[#F02757] text-[#fff] text-lg p-5 mt-10 w-full">
-                <h4 className="">Num</h4>
-                <h4 className="w-1/12">Image</h4>
-                <h4 className=" w-1/5">Name</h4>
-                <h4 className="">Price</h4>
+                <h4 className="max-sm:text-sm ">Num</h4>
+                <h4 className="w-1/12 max-sm:text-sm">Image</h4>
+                <h4 className=" w-1/5 max-sm:text-sm">Name</h4>
+                <h4 className="max-sm:text-sm">Price</h4>
                 <div className="flex gap-10">
-                    <h4 className="">Update</h4>
-                    <h4 className="">Delete</h4>
+                    <h4 className="max-sm:text-sm">Update</h4>
+                    <h4 className="max-sm:text-sm">Delete</h4>
                 </div>
             </div>
             <div>
@@ -98,11 +98,11 @@ const AllProducts = () => {
 
             </div>
             {loadingAllProduct ? "" : <div>
-                <div className="text-center">
-                    <div className="join bg-[#F1F3F8] mt-16 mb-10 page_bg">
+                <div className="text-center p-5">
+                    <div className="join bg-[#F1F3F8] mt-10 mb-10 page_bg">
                         <button disabled={page === 0} onClick={() => setPage(page - 1)} className="join-item btn btn-sm">Prev</button>
                         {
-                            pageList.map((p, index) => <button key={index} className={`${page === index ? 'join-item btn btn-sm activePagination' : 'join-item btn btn-sm'} `} onClick={() => setPage(index)}>{index + 1}</button>)
+                            pageList.map((p, index) => <button key={index} className={`${page === index ? 'join-item btn btn-sm activePagination ' : 'join-item btn btn-sm'} `} onClick={() => setPage(index)}>{index + 1}</button>)
                         }
 
                         <button disabled={allProducts?.pageCount === page + 1} onClick={() => setPage(page + 1)} className="join-item btn btn-sm">Next</button>

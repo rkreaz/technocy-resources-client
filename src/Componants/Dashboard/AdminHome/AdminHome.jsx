@@ -66,7 +66,7 @@ const AdminHome = () => {
 
     return (
         <div className="bg-[#F1F3F8] lg:p-10">
-            <h1 className="text-3xl font-medium text-[#F02757]">
+            <h1 className="text-3xl font-medium text-[#F02757] pt-10 px-5">
                 <span>Hi, Welcome </span>
                 {
                     user?.displayName ? user.displayName : 'Back'
@@ -74,7 +74,7 @@ const AdminHome = () => {
             </h1>
             <div className="">
 
-                <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-5 mt-10">
+                <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-5 mt-5 p-5">
 
                     <div className="flex items-center gap-3 justify-center bg-gradient-to-r from-[#8E008E] to-[#F02757] text-white px-5 py-4">
                         <div className="">
@@ -138,8 +138,8 @@ const AdminHome = () => {
                     </div>
                 </div>
 
-                <div className="flex justify-between items-center">
-                    <div className="w-1/2">
+                <div className="flex max-sm:flex-col justify-between items-center p-5">
+                    <div className="lg:w-1/2">
                         <BarChart
                             width={500}
                             height={300}
