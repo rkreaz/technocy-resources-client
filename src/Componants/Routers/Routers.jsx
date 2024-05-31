@@ -21,6 +21,7 @@ import Payment from "../Dashboard/Payment/Payment";
 import PaymentHistory from "../Dashboard/PaymentHistory/PaymentHistory";
 import AddReview from "../Dashboard/AddReview/AddReview";
 import AdminRoute from "./AdminRoute";
+import AddCategory from "../Dashboard/AddCategory/AddCategory";
 
 
 export const router = createBrowserRouter([
@@ -75,6 +76,10 @@ export const router = createBrowserRouter([
       {
         path: '/dashboard/allUsers',
         element: <AdminRoute><AllUsers></AllUsers></AdminRoute>
+      },
+      {
+        path: '/dashboard/addCategory',
+        element: <AdminRoute><AddCategory></AddCategory></AdminRoute>
       },
 
       // user related

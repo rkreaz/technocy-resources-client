@@ -40,6 +40,8 @@ const Dashboard = () => {
 
                                         <NavLink className='px-2 flex items-center gap-3 border hover:bg-[#F02757] hover:text-[#FFFFFF] p-1 rounded-xl' to={'/dashboard/addProduct'}><FaCartPlus></FaCartPlus>Add Product</NavLink>
 
+                                        <NavLink className='px-2 flex items-center gap-3 border hover:bg-[#F02757] hover:text-[#FFFFFF] p-1 rounded-xl' to={'/dashboard/addCategory'}><FaCartPlus></FaCartPlus>Add Category</NavLink>
+
                                         <NavLink className='px-2 flex items-center gap-3 border hover:bg-[#F02757] hover:text-[#FFFFFF] p-1 rounded-xl' to={'/dashboard/allProducts'}><FaShoppingCart></FaShoppingCart>All Products</NavLink>
 
                                         <NavLink className='px-2 flex items-center gap-3 border hover:bg-[#F02757] hover:text-[#FFFFFF] p-1 rounded-xl' to={'/dashboard/allUsers'}><FaUsers></FaUsers>All Users</NavLink>

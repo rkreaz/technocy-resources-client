@@ -14,6 +14,7 @@ const AddProduct = () => {
     const [allCategory] = useAllCategory();
     const axiosPublic = useAxiosPublic();
     const axiosSecure = useAxiosSecure();
+    // console.log('My all Category', allCategory);
 
 
     const onSubmit = async (data) => {
