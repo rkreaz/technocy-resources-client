@@ -1,19 +1,20 @@
 import { Helmet } from "react-helmet-async";
 // import loginImg from '../../assets/image/shop.jpg'
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { FaFacebook, FaGithub, FaGoogle } from "react-icons/fa";
+import { FaGoogle } from "react-icons/fa";
 import { LoadCanvasTemplate, loadCaptchaEnginge, validateCaptcha } from 'react-simple-captcha';
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../providers/AuthProviders";
 import Swal from "sweetalert2";
-import useAxiosPublic from "../Hooks/useAxiosPublic";
+// import useAxiosPublic from "../Hooks/useAxiosPublic";
+import useAxiosSecure from "../Hooks/useAxiosSecure";
 
 const Login = () => {
     const [disable, setDisable] = useState(true);
     const { login, loginWithGoogle } = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
-    const axiosPublic = useAxiosPublic();
+    const axiosSecure = useAxiosSecure();
 
     const from = location.state?.from?.pathname || '/';
     // console.log("from", from);
@@ -54,16 +55,17 @@ const Login = () => {
     const handleLoginWithGoogle = () => {
         // console.log('handle Login With Google');
         loginWithGoogle()
+
             .then(result => {
-                // console.log(result.user);
+                // console.log('handle Login With Google', result.user);
                 const userinfo = {
                     email: result.user?.email,
                     name: result.user?.displayName
                 }
-                axiosPublic.post('/users', userinfo)
+                axiosSecure.post('/users', userinfo)
                     .then(res => {
                         console.log(res.data);
-                       
+
                         navigate(from, { replace: true })
 
                     })
@@ -72,6 +74,7 @@ const Login = () => {
                 console.log(error);
             })
     }
+
 
     return (
         <div>
@@ -117,13 +120,9 @@ const Login = () => {
                     <div className='text-center mt-5'>
                         <p>New here? <Link to={'/register'} className='font-bold text-[#2CA04E] lg:text-xl max-sm:text-sm'> Create a New Account</Link></p>
                         <h2 className='lg:text-xl max-sm:text-sm font-semibold text-[#000] mt-5'>Or sign in with</h2>
+
                         <div className='flex gap-5 justify-center items-center mb-11 mt-8'>
-
-                            <a onClick={handleLoginWithGoogle} className="border p-2 rounded-full text-[#FCD050] hover:bg-[#2CA04E] hover:text-[#fff]"> <FaGoogle className='text-2xl'></FaGoogle></a>
-
-                            <a className="border p-2 rounded-full text-[#0866FF] hover:bg-[#F02757] hover:text-[#fff]"><FaFacebook className='text-2xl'></FaFacebook></a>
-
-                            <a className="border p-2 rounded-full text-[#000] hover:bg-[#F02757] hover:text-[#fff]"><FaGithub className='text-2xl'></FaGithub> </a>
+                            <a onClick={handleLoginWithGoogle} className="btn btn-slide-left text-white bg-[#FF3811] hover:bg-[#c94646]"> <FaGoogle className='text-[#2CA04E] text-2xl'></FaGoogle>Sign With Google</a>
                         </div>
                     </div>
 
@@ -135,3 +134,4 @@ const Login = () => {
 };
 
 export default Login;
+

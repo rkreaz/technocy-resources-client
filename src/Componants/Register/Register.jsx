@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { Link, useNavigate } from "react-router-dom";
-import { FaFacebook, FaGithub, FaGoogle } from "react-icons/fa";
+import { FaGoogle } from "react-icons/fa";
 import { useForm } from "react-hook-form";
 import { useContext } from "react";
 import { AuthContext } from "../providers/AuthProviders";
@@ -155,12 +155,7 @@ const Register = () => {
                         <p>Already registered?<Link to={'/login'} className='font-bold text-[#2CA04E]'> Go to Login</Link></p>
                         <h2 className='text-xl font-semibold mt-5'>Or sign in with</h2>
                         <div className='flex gap-5 justify-center items-center mb-8 mt-8'>
-
-                            <a onClick={handleRegisterWithGoogle} className="border p-2 rounded-full text-[#FCD050] hover:bg-[#2CA04E] hover:text-[#fff]"> <FaGoogle className='text-2xl'></FaGoogle></a>
-
-                            <a className="border p-2 rounded-full text-[#0866FF] hover:bg-[#F02757] hover:text-[#fff]"><FaFacebook className='text-2xl'></FaFacebook></a>
-
-                            <a className="border p-2 rounded-full text-[#0866FF] hover:bg-[#F02757] hover:text-[#fff]"><FaGithub className='text-2xl'></FaGithub> </a>
+                            <a onClick={handleRegisterWithGoogle} className="btn btn-slide-left text-white bg-[#FF3811] hover:bg-[#c94646]"> <FaGoogle className='text-[#2CA04E] text-2xl'></FaGoogle>Sign With Google</a>
                         </div>
                     </div>
 
