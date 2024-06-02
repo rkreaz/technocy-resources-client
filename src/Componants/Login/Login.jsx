@@ -16,7 +16,7 @@ const Login = () => {
     const axiosPublic = useAxiosPublic();
 
     const from = location.state?.from?.pathname || '/';
-    console.log("from", from);
+    // console.log("from", from);
 
     const handleRegister = event => {
         event.preventDefault();

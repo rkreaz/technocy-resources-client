@@ -126,7 +126,7 @@ const ProductUpdate = ({ singleProductStore, refetch }) => {
 
 ProductUpdate.propTypes = {
     singleProductStore: PropTypes.object,
-    refetch: PropTypes.object,
+    refetch: PropTypes.func,
 
 };
 
