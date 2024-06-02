@@ -1,26 +1,33 @@
 import { NavLink, Outlet } from "react-router-dom";
 import { IoMdMenu } from "react-icons/io";
-import { FaCartPlus, FaCcApplePay, FaHistory, FaHome, FaShoppingCart, FaUser, FaUsers } from "react-icons/fa";
+import { FaCartPlus, FaHistory, FaHome, FaShoppingCart, FaUser, FaUsers } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { AiOutlineProduct } from "react-icons/ai";
 import logoIcon from '../../../src/assets/logo/logo.svg';
 import useCart from "../Hooks/useCart";
 import { VscPreview } from "react-icons/vsc";
 import useAdmin from "../Hooks/useAdmin";
+import useAuth from "../Hooks/useAuth";
+import { TbCategory } from "react-icons/tb";
 
 const Dashboard = () => {
     const [card] = useCart();
     const [isAdmin] = useAdmin();
-    const price = card.reduce((total, item) => total + item.price, 0);
-    const totalPrice = price.toFixed(2);
+    const { logOut } = useAuth();
+
+    const handleLogOut = () => {
+        logOut()
+            .then(() => { })
+            .catch(error => console.log(error))
+    }
     
     return (
-        <div className="theme">
+        <div className="">
             <div className="max-w-6xl mx-auto">
                 <div className="lg:flex gap-5">
                     <div className="lg:drawer-open">
                         <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-                        <div className="drawer-content w-1/6 flex flex-col justify-center px-3 p-2">
+                        <div className="drawer-content w-1/6 flex flex-col justify-center px-3">
                             {/* Page content here */}
                             <label htmlFor="my-drawer-2" className="text-3xl px-4 py-1 hover:bg-[#F02757] text-[#F02757] hover:text-[#FFFFFF] lg:hidden rounded-xl cursor-pointer"><IoMdMenu></IoMdMenu></label>
                         </div>
@@ -40,7 +47,7 @@ const Dashboard = () => {
 
                                         <NavLink className='px-2 flex items-center gap-3 border hover:bg-[#F02757] hover:text-[#FFFFFF] p-1 rounded-xl' to={'/dashboard/addProduct'}><FaCartPlus></FaCartPlus>Add Product</NavLink>
 
-                                        <NavLink className='px-2 flex items-center gap-3 border hover:bg-[#F02757] hover:text-[#FFFFFF] p-1 rounded-xl' to={'/dashboard/addCategory'}><FaCartPlus></FaCartPlus>Add Category</NavLink>
+                                        <NavLink className='px-2 flex items-center gap-3 border hover:bg-[#F02757] hover:text-[#FFFFFF] p-1 rounded-xl' to={'/dashboard/addCategory'}><TbCategory></TbCategory>Add Category</NavLink>
 
                                         <NavLink className='px-2 flex items-center gap-3 border hover:bg-[#F02757] hover:text-[#FFFFFF] p-1 rounded-xl' to={'/dashboard/allProducts'}><FaShoppingCart></FaShoppingCart>All Products</NavLink>
 
@@ -51,11 +58,9 @@ const Dashboard = () => {
                                         <>
                                             <NavLink className='px-2 flex items-center gap-3 border hover:bg-[#F02757] hover:text-[#FFFFFF] p-1 rounded-xl' to={'/dashboard/myProfile'}><FaUser></FaUser>My Profile</NavLink>
 
-                                            <NavLink className='px-2 flex items-center gap-3 border hover:bg-[#F02757] hover:text-[#FFFFFF] p-1 rounded-xl' to={'/dashboard/orderProduct'}><FaShoppingCart></FaShoppingCart>Order Product({card.length})</NavLink>
+                                            <NavLink className='px-2 flex items-center gap-3 border hover:bg-[#F02757] hover:text-[#FFFFFF] p-1 rounded-xl' to={'/dashboard/orderProduct'}><FaShoppingCart></FaShoppingCart>My Cart({card.length})</NavLink>
 
-                                            <NavLink className='px-2 flex items-center gap-3 border hover:bg-[#F02757] hover:text-[#FFFFFF] p-1 rounded-xl' to={'/dashboard/payment'}><FaCcApplePay></FaCcApplePay>Payment$({totalPrice})</NavLink>
-
-                                            <NavLink className='px-2 flex items-center gap-3 border hover:bg-[#F02757] hover:text-[#FFFFFF] p-1 rounded-xl' to={'/dashboard/paymentHistory'}><FaHistory></FaHistory>Payment History</NavLink>
+                                            <NavLink className='px-2 flex items-center gap-3 border hover:bg-[#F02757] hover:text-[#FFFFFF] p-1 rounded-xl' to={'/dashboard/paymentHistory'}><FaHistory></FaHistory>My Orders</NavLink>
 
                                             <NavLink className='px-2 flex items-center gap-3 border hover:bg-[#F02757] hover:text-[#FFFFFF] p-1 rounded-xl' to={'/dashboard/addReview'}><VscPreview></VscPreview>Add Review</NavLink>
 
@@ -63,8 +68,8 @@ const Dashboard = () => {
                                         </>
                                 }
 
-                                <p className='pb-10'></p>
-                                <p className='border-t-2 border-bg-[#F02757] pb-10'></p>
+                                <p className='pb-5'></p>
+                                <p className='border-t-2 border-[#F02757] pb-5'></p>
 
 
                                 <NavLink className='px-2 flex items-center gap-3 border hover:bg-[#F02757] hover:text-[#FFFFFF] p-1 rounded-xl' to={'/'}><FaHome></FaHome>Home</NavLink>
@@ -73,6 +78,10 @@ const Dashboard = () => {
 
                                 <NavLink className='px-2 flex items-center gap-3 border hover:bg-[#F02757] hover:text-[#FFFFFF] p-1 rounded-xl' to={'/contact'}><MdEmail></MdEmail>Contact</NavLink>
 
+                                <p className='pb-5'></p>
+                                <p className='border-t-2 border-[#F02757] pb-8'></p>
+
+                                <h2 onClick={handleLogOut} className="bg-[#F02757] text-[#fff] hover:bg-[#BD1349] text-lg font-semibold rounded-lg py-1 cursor-pointer text-center mt-10">Log Out</h2>
 
                             </ul>
 

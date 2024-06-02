@@ -31,11 +31,9 @@ const AdminHome = () => {
             return res.data;
         }
     });
-    console.log(chartData);
     const categoryData = chartData.map(data => {
         return {name: data.category, value: data.totalQuantity}
     })
-    console.log(categoryData);
 
     const getPath = (x, y, width, height) => {
         return `M${x},${y + height}C${x + width / 3},${y + height} ${x + width / 2},${y + height / 3}

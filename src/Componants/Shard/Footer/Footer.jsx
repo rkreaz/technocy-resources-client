@@ -8,8 +8,8 @@ import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
 
 const Footer = () => {
     return (
-        <div className=''>
-            <div className="max-w-6xl mx-auto pt-14">
+        <div className='bg-[#F1F3F8]'>
+            <div className="max-w-6xl mx-auto mt-20 pt-20">
                 <footer className="footer mx-auto max-sm:text-center aside_footer">
                     <nav>
                         <h6 className="w-full font-bold hover:text-[#F02757] hover:underline cursor-pointer text-[#000]">COMPANY</h6>

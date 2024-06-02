@@ -20,10 +20,6 @@ const ProductUpdate = ({ singleProductStore, refetch }) => {
     const axiosPublic = useAxiosPublic();
     const axiosSecure = useAxiosSecure();
     const { name, price, details, image, category, _id } = singleProductStore;
-    console.log(category);
-
-
-
 
     const onSubmit = async (data) => {
         setDisableClick(true)
@@ -43,7 +39,6 @@ const ProductUpdate = ({ singleProductStore, refetch }) => {
             price: parseFloat(data.price)
         }
         const productRes = await axiosSecure.patch(`/products/${_id}`, productCart);
-        console.log(productRes.data);
         if (productRes.data.modifiedCount > 0) {
             Swal.fire({
                 position: "top",

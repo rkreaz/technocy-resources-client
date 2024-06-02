@@ -16,18 +16,17 @@ const Login = () => {
     const axiosPublic = useAxiosPublic();
 
     const from = location.state?.from?.pathname || '/';
-    console.log(from);
+    console.log("from", from);
 
     const handleRegister = event => {
         event.preventDefault();
         const form = event.target;
         const email = form.email.value;
         const password = form.password.value;
-        console.log(email, password);
+        // console.log(email, password);
         login(email, password)
             .then(result => {
-                const user = result.user;
-                console.log(user);
+                console.log(result.user);
                 Swal.fire({
                     title: "User Login SuccessFul",
                     icon: "success"
@@ -56,7 +55,7 @@ const Login = () => {
         // console.log('handle Login With Google');
         loginWithGoogle()
             .then(result => {
-                console.log(result.user);
+                // console.log(result.user);
                 const userinfo = {
                     email: result.user?.email,
                     name: result.user?.displayName
@@ -64,12 +63,8 @@ const Login = () => {
                 axiosPublic.post('/users', userinfo)
                     .then(res => {
                         console.log(res.data);
-                        Swal.fire({
-                            title: "Success",
-                            text: "Your Google Login has been successfully.",
-                            icon: "success"
-                        });
-                        navigate(location?.state ? location?.state : '/')
+                       
+                        navigate(from, { replace: true })
 
                     })
             })

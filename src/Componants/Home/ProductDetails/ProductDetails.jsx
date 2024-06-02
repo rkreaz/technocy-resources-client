@@ -1,4 +1,4 @@
-import { NavLink, useNavigate, useParams } from "react-router-dom";
+import { Link, NavLink, useLocation, useNavigate, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import useSingleProducts from "../../Hooks/useSingleProducts";
 import useSingleCategory from "../../Hooks/useSingleCategory";
@@ -7,6 +7,7 @@ import useAxiosSecure from "../../Hooks/useAxiosSecure";
 import useAuth from "../../Hooks/useAuth";
 import useCart from "../../Hooks/useCart";
 import Swal from "sweetalert2";
+import { useEffect } from "react";
 
 const ProductDetails = () => {
     const [allCategory] = useAllCategory();
@@ -15,12 +16,17 @@ const ProductDetails = () => {
     const { user } = useAuth();
     const navigate = useNavigate();
     const [, refetch] = useCart()
-    
+    const location = useLocation();
 
-    const [singleProduct, loadingSingleProduct] = useSingleProducts(id);
+
+    const [singleProduct, loadingSingleProduct, singleRefetch] = useSingleProducts(id);
 
 
     const [singleCategory, isLoading] = useSingleCategory(category);
+
+    useEffect(() => {
+        singleRefetch()
+    }, [id, singleRefetch])
 
     if (loadingSingleProduct || isLoading) {
         return <div className="text-center">
@@ -82,14 +88,14 @@ const ProductDetails = () => {
                     <div className="w-3/12 flex flex-col items-center bg-[#F1F3F8] p-5">
                         <h2 className="font-bold text-2xl text-[#000] mb-5 mt-5">Product categories</h2>
                         {
-                            allCategory.length ? allCategory.map((listItem, index) => <NavLink className='text-lg  font-semibold text-[#000] m-1 border w-full text-center py-2 hover:bg-[#F02757] hover:text-[#fff] mt-2 rounded-lg' to={`/products/${listItem?.name}`} key={index}>{listItem.name}</NavLink>) : ''
+                            allCategory.length ? allCategory.map((listItem, index) => <NavLink className='text-lg  font-semibold text-[#000] m-1 border w-full text-center py-2 hover:bg-[#F02757] hover:text-[#fff] mt-2 rounded-lg capitalize' to={`/products/${listItem?.name}`} key={index}>{listItem.name}</NavLink>) : ''
                         }
                     </div>
 
                     <div className="w-9/12">
                         <div className="flex mt-10 gap-5">
                             <div className='w-1/2 container'>
-                                <img className="h-80 w-full" src={singleProduct?.image} alt="Shoes" />
+                                <img className="h-full w-full" src={singleProduct?.image} alt="Shoes" />
                             </div>
 
                             <div className=" w-1/2">
@@ -109,11 +115,20 @@ const ProductDetails = () => {
                                     singleCategory.slice(0, 3).map(cate => <div key={cate._id}>
                                         <div >
                                             <div className="card card-compact max-sm:w-full shadow-xl h-[400px]">
-                                                <div className='border container rounded-xl'><img className="h-44 mx-auto " src={cate.image} alt="Shoes" /></div>
+
+                                                <Link to={`/products/singleProduct/${cate._id}/${cate.category}`}>
+                                                    <div className='border container rounded-xl'><img className="h-44 mx-auto " src={cate.image} alt="Shoes" /></div>
+                                                </Link>
+
                                                 <p className='text-[#fff] bg-[#F90101] absolute left-2 px-1 text-sm rounded-lg mr-2 mt-2'>${cate.price}</p>
+
                                                 <div className="card-body">
-                                                    <h2 className="card-title text-2xl">{cate.name}</h2>
-                                                    <p>{cate.details}</p>
+                                                    <Link to={`/products/singleProduct/${cate._id}/${cate.category}`}>
+                                                        <h2 className="card-title text-2xl">{cate.name}</h2>
+                                                    </Link>
+                                                    <Link to={`/products/singleProduct/${cate._id}/${cate.category}`}>
+                                                        <p>{cate.details}</p>
+                                                    </Link>
                                                     <button onClick={() => handleAddToCard(cate)} className="btn btn-slide-left px-4 py-0 max-sm:px-2 max-sm:py-1 rounded-full mt-4">Add to Card</button>
                                                 </div>
                                             </div>

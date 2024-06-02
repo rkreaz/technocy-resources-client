@@ -12,6 +12,7 @@ const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
     const [cart] = useCart();
     const [isAdmin] = useAdmin();
+    
 
     const handleLogOut = () => {
         logOut()
@@ -86,7 +87,7 @@ const Navbar = () => {
                                 : <NavLink className={"navMenu"} to='/login'>Login</NavLink>
                         }
                     </div>
-                    <Link>
+                    <Link to={'/dashboard/orderProduct'}>
                         <button className="flex gap-1 ml-4">
                             <FaShoppingCart className='text-xl text-[#F02757]'></FaShoppingCart>
                             <div className="badge bg-[#F02757] border-0 text-[#fff]">+{cart.length}</div>

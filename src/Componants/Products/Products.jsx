@@ -43,7 +43,7 @@ const Products = () => {
                     <div className="w-3/12 flex flex-col items-center bg-[#F1F3F8] p-5">
                         <h2 className="font-bold text-2xl max-sm:text-lg text-[#000000] mb-5 mt-5">Product categories</h2>
                         {
-                            allCategory.length ? allCategory.map((listItem, index) => <NavLink onClick={() => setPage(0)} className='text-lg  max-sm:text-sm font-semibold m-1 border w-full text-center py-2 hover:bg-[#F02757] hover:text-[#fff] mt-2 rounded-lg' to={`/products/${listItem?.name}`} key={index}>{listItem?.name}</NavLink>) : ''
+                            allCategory.length ? allCategory.map((listItem, index) => <NavLink onClick={() => setPage(0)} className='text-lg  max-sm:text-sm font-semibold m-1 border w-full text-center py-2 hover:bg-[#F02757] hover:text-[#fff] mt-2 rounded-lg capitalize' to={`/products/${listItem?.name}`} key={index}>{listItem?.name}</NavLink>) : ''
                         }
                     </div>
 

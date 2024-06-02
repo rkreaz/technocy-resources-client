@@ -10,7 +10,7 @@ const OurStatistics = () => {
                 <div className="lg:mt-20">
                     <div className='flex flex-col lg:flex-row gap-10 p-5'>
                         <div className=' space-y-5 w-full text-center'>
-                            <h1 className="lg:text-5xl text-[#000] font-bold text-center mb-3 max-sm:text-2xl md:text-3xl max-md:text-3xl">Professional Service & Care
+                            <h1 className="lg:text-4xl text-[#000] font-bold text-center mb-3 max-sm:text-2xl md:text-3xl max-md:text-3xl">Professional Service & Care
                                 In A Pleasant Ambience</h1>
                             <p className='lg:text-base max-sm:text-sm'>Ensuring every customer feels valued and appreciated. Our dedicated team of experts is committed to providing top-notch assistance, tailored to meet your individual needs and preferences. We believe that a welcoming and comfortable environment is essential for a satisfying shopping experience, which is why we have meticulously designed our store to be both inviting and functional. Whether you are seeking the latest in electronics or need expert advice, our friendly staff is here to make your visit enjoyable and successful.</p>
                             
@@ -18,17 +18,17 @@ const OurStatistics = () => {
 
                                 <div className="stat place-items-center">
                                     <div className="stat-value max-sm:text-xl">31K</div>
-                                    <div className="stat-title text-[#000] mt-2 max-sm:text-sm">Downloads</div>
+                                    <div className="stat-title text-[#fff] mt-2 max-sm:text-sm">Downloads</div>
                                 </div>
 
                                 <div className="stat place-items-center">
                                     <div className="stat-value max-sm:text-xl">4,200</div>
-                                    <div className="stat-title text-[#000] mt-2 max-sm:text-sm">Downloads</div>
+                                    <div className="stat-title text-[#fff] mt-2 max-sm:text-sm">Downloads</div>
                                 </div>
 
                                 <div className="stat place-items-center">
                                     <div className="stat-value max-sm:text-xl">1,200</div>
-                                    <div className="stat-title text-[#000] mt-2 max-sm:text-sm">Downloads</div>
+                                    <div className="stat-title text-[#fff] mt-2 max-sm:text-sm">Downloads</div>
                                 </div>
 
                             </div>

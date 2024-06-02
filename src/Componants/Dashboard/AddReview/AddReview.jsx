@@ -1,21 +1,21 @@
 import { useForm } from "react-hook-form";
-import HomePageTitle from "../../HomePageTitle/HomePageTitle";
 import useAxiosPublic from "../../Hooks/useAxiosPublic";
 import Swal from "sweetalert2";
+import useAuth from "../../Hooks/useAuth";
 
 const AddReview = () => {
+    const { user } = useAuth()
     const { register, handleSubmit, reset } = useForm();
     const axiosPublic = useAxiosPublic();
-   
+
 
     const onSubmit = async (data) => {
-      
+
         const reviewCart = {
             name: data.name,
             rating: data.rating,
-            category: data.category,
-            suggestions: data.suggestions,
             details: data.details,
+            image: user?.photoURL,
         }
         const reviewsRes = await axiosPublic.post('/reviews', reviewCart);
         console.log(reviewsRes.data);
@@ -33,9 +33,10 @@ const AddReview = () => {
     return (
         <div>
             <div className="bg-[#F1F3F8] rounded-xl py-5">
-                <HomePageTitle
-                    Heading={'Add Review'}
-                ></HomePageTitle>
+                <div className="text-center mt-10 pb-10">
+                    <h1 className="text-3xl max-md:text-2xl max-sm:text-xl  font-bold text-[#F02757]">User Products Review</h1>
+                    <p className='w-1/2 mx-auto border-t-2 border-[#F02757] mt-4'></p>
+                </div>
                 <div className="mx-auto px-5">
                     <form onSubmit={handleSubmit(onSubmit)}>
 
@@ -51,32 +52,16 @@ const AddReview = () => {
                                 <label className="label">
                                     <span className="text-xl max-sm:text-sm font-semibold text-[#000]">Rating</span>
                                 </label>
-                                <input type="text" placeholder="Rating" {...register("rating", { required: true })} name='rating' className="input input-bordered bg-white" />
-                            </div>
-                        </div>
-
-                        <div className="lg:flex max-md:flex md:flex max-sm:flex-col justify-between gap-5 mt-5">
-                            <div className="form-control w-full">
-                                <label className="label">
-                                    <span className="text-xl max-sm:text-sm font-semibold text-[#000]">Which Product do you like most?</span>
-                                </label>
-                                <input type="text" placeholder="The product you liked most" {...register("category", { required: true })} name='category' className="input input-bordered bg-white" />
-                            </div>
-
-                            <div className="form-control  w-full">
-                                <label className="label">
-                                    <span className="text-xl max-sm:text-sm font-semibold text-[#000]">Any suggestions for us?</span>
-                                </label>
-                                <input type="text" placeholder="Suggestion" {...register("suggestions", { required: true })} name='suggestions' className="input input-bordered bg-white" />
+                                <input type="number" placeholder="Rating" {...register("rating", { required: true })} name='rating' className="input input-bordered bg-white" />
                             </div>
                         </div>
 
                         <div>
                             <label className="form-control w-full mt-5">
                                 <div className="label">
-                                    <span className="text-xl max-sm:text-sm font-semibold">Product Details</span>
+                                    <span className="text-xl max-sm:text-sm font-semibold">Product Review</span>
                                 </div>
-                                <textarea {...register("details", { required: true })} className="textarea textarea-primary bg-[#f3eeee] text-[#000]" placeholder="Product Details"></textarea>
+                                <textarea {...register("details", { required: true })} className="textarea textarea-primary bg-[#f3eeee] text-[#000]" placeholder="Product Review"></textarea>
                             </label>
                         </div>
 

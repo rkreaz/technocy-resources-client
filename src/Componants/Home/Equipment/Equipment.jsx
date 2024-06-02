@@ -30,7 +30,7 @@ const Equipment = () => {
                         data-aos-delay="300"
                     >
                         <h1 className="font-bold text-3xl text-[#000000] max-sm:text-xl">Innovation quality and exceptional service in electronics.</h1>
-                        <p className="font-normal text-base text-[#000000] max-sm:text-sm">Welcome to [Your Company Name] - Learn About Our Journey, Mission, and Team. Discover How We are Revolutionizing the Electronics Market with Innovation, Quality Products, and Exceptional Customer Service.</p>
+                        <p className="font-normal text-base text-[#000000] max-sm:text-sm">Welcome to Learn About Our Journey, Mission, and Team. Discover How We are Revolutionizing the Electronics Market with Innovation, Quality Products, and Exceptional Customer Service.</p>
 
                         <h1 className="font-bold text-2xl text-[#000000] max-sm:text-xl">Call for book: <span className="text-[#F02757]">8-800-10-500</span></h1>
                         <div className="flex gap-2">

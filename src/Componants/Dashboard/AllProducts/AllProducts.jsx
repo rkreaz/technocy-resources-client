@@ -1,22 +1,28 @@
 import { RiDeleteBinLine } from "react-icons/ri";
 import useProducts from "../../Hooks/useProducts";
 import { useEffect, useState } from "react";
-import { FaEdit } from "react-icons/fa";
+import { FaEdit, FaEye} from "react-icons/fa";
 import Swal from "sweetalert2";
 import useAxiosSecure from "../../Hooks/useAxiosSecure";
 import ProductUpdate from "../ProductUpdate/ProductUpdate";
+import ViewProduct from "../ViewProduct/ViewProduct";
 
 const AllProducts = () => {
     const [page, setPage] = useState(0);
     const [limit, setLimit] = useState(30);
     const [singleProductStore, setSingleProductStore] = useState({});
+    const [viewProduct, setViewProduct] = useState({});
     const [allProducts, loadingAllProduct, refetch] = useProducts(limit, page);
     const axiosSecure = useAxiosSecure();
 
     const handleUpdateProduct = (product) => {
        document.getElementById('my_modal_3').showModal();
        setSingleProductStore(product)
+    } 
 
+    const handleViewProduct = (product) => {
+       document.getElementById('my_modal_5').showModal();
+       setViewProduct(product)
     } 
 
     const handleDeleteProduct = (product) => {
@@ -60,14 +66,18 @@ const AllProducts = () => {
 
     return (
         <div>
-            {/* <h1 className="text-3xl">Admin All Users: {users.length}</h1> */}
+            <div className="text-center mt-10 pb-10">
+                <h1 className="text-3xl max-md:text-2xl max-sm:text-xl  font-bold text-[#F02757]">All Products</h1>
+                <p className='w-1/2 mx-auto border-t-2 border-[#F02757] mt-4'></p>
+            </div>
 
-            <div className="flex justify-between bg-[#F02757] text-[#fff] text-lg p-5 mt-10 w-full">
+            <div className="flex justify-between bg-[#F02757] text-[#fff] text-lg p-5 w-full">
                 <h4 className="max-sm:text-sm ">Num</h4>
                 <h4 className="w-1/12 max-sm:text-sm">Image</h4>
                 <h4 className=" w-1/5 max-sm:text-sm">Name</h4>
                 <h4 className="max-sm:text-sm">Price</h4>
-                <div className="flex gap-10">
+                <div className="flex gap-5">
+                    <h4 className="max-sm:text-sm">View</h4>
                     <h4 className="max-sm:text-sm">Update</h4>
                     <h4 className="max-sm:text-sm">Delete</h4>
                 </div>
@@ -85,6 +95,8 @@ const AllProducts = () => {
                                 <h3 className="max-sm:text-sm ">${product.price}</h3>
 
                                 <div className="flex gap-10">
+                                    <p onClick={() => handleViewProduct(product)} className='bg-[#008000d7] p-2 rounded-lg '>  <FaEye  className=' text-[#fff]'></FaEye  ></p>
+
                                     <p onClick={() => handleUpdateProduct(product)} className='bg-[#3D6ED7] p-2 rounded-lg '>  <FaEdit className=' text-[#fff]'></FaEdit ></p>
 
                                     <p onClick={() => handleDeleteProduct(product)} className='bg-[#F02757] p-2 rounded-lg '>  <RiDeleteBinLine className=' text-[#fff]'></RiDeleteBinLine></p>
@@ -122,6 +134,7 @@ const AllProducts = () => {
                 </div>
             </div>}
             <ProductUpdate singleProductStore={singleProductStore} refetch={refetch}/>
+            <ViewProduct viewProduct={viewProduct} />
         </div>
     );
 };

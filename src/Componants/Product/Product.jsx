@@ -62,7 +62,7 @@ const Product = ({ product }) => {
             <div className="card card-compact max-sm:w-full shadow-xl theme_text h-[380px]">
                 <div className='border container rounded-xl'>
                     <Link to={`/products/singleProduct/${_id}/${category}`}>
-                        <img className="h-36 mx-auto" src={image} alt="Shoes" />
+                        <img className="h-36 mx-auto p-5" src={image} alt="Shoes" />
                     </Link>
                 </div>
                 <p className='text-[#fff] bg-[#F02757] absolute left-2 px-1 text-sm rounded-lg mr-2 mt-2'>${price}</p>

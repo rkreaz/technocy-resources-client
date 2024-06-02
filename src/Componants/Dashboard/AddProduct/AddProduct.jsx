@@ -47,7 +47,13 @@ const AddProduct = () => {
     }
     return (
         <div className="p-5">
-            <div className='lg:px-20 lg:mt-16 max-sm:mt-5 mr-5'>
+
+            <div className="text-center mt-10 pb-10">
+                <h1 className="text-3xl max-md:text-2xl max-sm:text-xl  font-bold text-[#F02757]">Add Products</h1>
+                <p className='w-1/2 mx-auto border-t-2 border-[#F02757] mt-4'></p>
+            </div>
+
+            <div className='lg:px-20 mr-5'>
                 <form className='space-y-6' onSubmit={handleSubmit(onSubmit)}>
 
                     <div>
@@ -86,7 +92,7 @@ const AddProduct = () => {
                             <div className="label">
                                 <span className="text-xl font-semibold">Product Details*</span>
                             </div>
-                            <textarea {...register("details", { required: true })} className="textarea textarea-primary bg-[#f3eeee] text-[#000]" placeholder="Product Details"></textarea>
+                            <textarea {...register("details", { required: true })} className="textarea textarea-bordered bg-[#f3eeee] text-[#000]" placeholder="Product Details"></textarea>
                         </label>
                     </div>
 
@@ -97,7 +103,6 @@ const AddProduct = () => {
                     <button className='btn btn-slide-left px-10 py-0 max-sm:px-2 max-sm:py-1 rounded-full mt-4'>
                         Add Item <FaUtensils></FaUtensils>
                     </button>
-
                 </form>
             </div>
         </div>

@@ -2,7 +2,7 @@ import Swal from "sweetalert2";
 import useAuth from "../../Hooks/useAuth";
 import useAxiosSecure from "../../Hooks/useAxiosSecure";
 import useSingleCategory from "../../Hooks/useSingleCategory";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import useCart from "../../Hooks/useCart";
 
 const Cart = () => {
@@ -65,21 +65,29 @@ const Cart = () => {
                     singleCategory.slice(0, 4).map(offer => <div key={offer._id}>
                         <div className="card card-compact w-56  max-sm:w-full md:w-full shadow-xl bg-[#F1F3F8] h-[400px]">
 
-                            <div className='border container rounded-xl'>
-                                <img className=" h-36 mx-auto" src={offer.image} alt="Shoes" />
-                            </div>
+                            <Link to={`/products/singleProduct/${offer._id}/${offer.category}`}>
+                                <div className='border container rounded-xl'>
+                                    <img className=" h-36 mx-auto p-5" src={offer.image} alt="Shoes" />
+                                </div>
+                            </Link>
+
 
                             <p className='text-[#fff] bg-[#F02757] absolute left-2 px-2 rounded-lg mr-2 mt-2'>${offer.price}</p>
-                            <div className="card-body">
+                      
+                        <div className="card-body">
+                            <Link to={`/products/singleProduct/${offer._id}/${offer.category}`}>
                                 <h2 className="card-title text-xl text-[#000] ">{offer.name}</h2>
+                            </Link>
+                            <Link to={`/products/singleProduct/${offer._id}/${offer.category}`}>
                                 <p>{offer.details}</p>
-                                <button onClick={() => handleAddToCard(offer)} className="btn btn-slide-left px-4 py-0 max-sm:px-2 max-sm:py-1 rounded-full mt-4">Add to Card</button>
-                            </div>
+                            </Link>
+                            <button onClick={() => handleAddToCard(offer)} className="btn btn-slide-left px-4 py-0 max-sm:px-2 max-sm:py-1 rounded-full mt-4">Add to Card</button>
                         </div>
+                    </div>
 
                     </div>)
-            }
-        </div>
+}
+        </div >
     );
 };
 

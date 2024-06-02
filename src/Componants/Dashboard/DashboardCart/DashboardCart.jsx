@@ -42,7 +42,10 @@ const DashboardCart = () => {
 
     return (
         <div className="mr-5 px-5">
-            <h1 className="text-2xl font-bold  text-[#000] lg:mt-10 max-sm:mt-5 mb-5">Order Products:</h1>
+            <div className="text-center mt-10 pb-10">
+                <h1 className="text-3xl max-md:text-2xl max-sm:text-xl  font-bold text-[#F02757]">Order Cart Products</h1>
+                <p className='w-1/2 mx-auto border-t-2 border-[#F02757] mt-4'></p>
+            </div>
             <div className="md:flex justify-between  gap-5">
                 <div className="md:w-9/12">
                     <div className="">

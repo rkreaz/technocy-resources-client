@@ -7,7 +7,7 @@ const Contact = () => {
             <Helmet>
                 <title>Technocy | Contact</title>
             </Helmet>
-
+            {/* 0E0050 */}
             <div>
                 <div className="hero lg:h-[600px] max-md:h-[400px] md:h-[400px] max-sm:h-[300px] lg:pt-20 max-sm:pt-28 max-md:pt-16" style={{ backgroundImage: 'url(https://i.ibb.co/W5jCYrn/Screenshot-54.png)' }}>
                     <div className="hero-overlay bg-opacity-50"></div>
